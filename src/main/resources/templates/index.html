@@ -1,4 +1,4 @@
-<html>
+<html  xmlns:th="http://www.thymeleaf.org">
     <head>
         <title>La Hoja de Palma</title>
         <meta charset="UTF-8">
@@ -21,7 +21,7 @@
                         <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="recetas.html">Recetas</a></li>
                         <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="reservaciones.html">Reservaciones</a></li>
                         <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="ubicacion.html">Ubicación</a></li>
-                        <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="express.html">Express</a></li>
+                        <li class="nav-menu-item"><a class="nav-menu-link nav-link" th:href="@{/express}">Express</a></li>
                     </ul>
                 </nav>
             </header>
