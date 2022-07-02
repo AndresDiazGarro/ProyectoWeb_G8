@@ -9,11 +9,11 @@ body{
 }
 
 .header{
-    background-color: #D98014;
+    background-color:#6CCED9;
     height: 12%;
     position: fixed;
     top: 0;
-    left: 0;
+    left: 0; 
     width: 100%;
 }
 
@@ -25,7 +25,7 @@ body{
 }
 
 .nav-link{
-    color: white;
+    color: whitesmoke;
     text-decoration: none;
 }
 
@@ -49,7 +49,7 @@ body{
 }
 
 .nav-menu-item:hover{
-    background-color: navy;
+    background-color: #69AFBF;
     transition: 0.5s
 }
 

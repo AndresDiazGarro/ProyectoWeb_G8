@@ -17,17 +17,17 @@
     top: 12%;
     right: 0;
     height: auto;
-    width: 20%;
-    background-color: #732002;
-    color: black;
+    width: 15%;
+    background-color: #A68B03;
+    color: whitesmoke;
 }
 #contenido {
     position: absolute;
     top: 12%;
     left: 0;
     height: auto;
-    width: 80%;
-    background-color: #323E40;
+    width: 85%;
+    background-color: #403001;
     color: whitesmoke;
     overflow: visible;
 }

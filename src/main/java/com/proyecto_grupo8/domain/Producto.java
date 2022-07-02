@@ -16,19 +16,20 @@ public class Producto implements Serializable{
     private Long idProducto;
     String nombre;
     String descripcion;
-    String categoria;
     double precio;
+    String categoria;
 
     public Producto() {
     }
 
-    public Producto(String nombre, String descripcion, String categoria, double precio) {
+    public Producto(Long idProducto, String nombre, String descripcion, double precio, String categoria) {
+        this.idProducto = idProducto;
         this.nombre = nombre;
         this.descripcion = descripcion;
-        this.categoria = categoria;
         this.precio = precio;
+        this.categoria = categoria;
     }
-    
+
     
     
 }

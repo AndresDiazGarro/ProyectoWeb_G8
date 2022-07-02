@@ -6,62 +6,80 @@
         <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <aside id="barraLateral">
-            <h2>Productos más vendidos</h2>
+    <header class="header">
+        <nav class="nav">
+            <a th:href="@{/}" class="nav-link logo">Restaurante La Hoja de Palma</a>
+            <ul class="nav-menu">
+                <li class="nav-menu-item"><a class="nav-menu-link nav-link" th:href="@{/menu}">Menú</a></li>
+                <li class="nav-menu-item"><a class="nav-menu-link nav-link" th:href="@{/recetas}">Recetas</a></li>
+                <li class="nav-menu-item"><a class="nav-menu-link nav-link" th:href="@{/reservaciones}">Reservaciones</a></li>
+                <li class="nav-menu-item"><a class="nav-menu-link nav-link" th:href="@{/ubicacion}">Ubicación y Horario</a></li>
+                <li class="nav-menu-item"><a class="nav-menu-link nav-link" th:href="@{/express}">Express</a></li>
+            </ul>
+        </nav>
+    </header>
+        </body>
+    <body>
+        <aside id="barraLateral" style="text-align: center">
+            <br>
+            <h2 >Platillos Populares</h2>
+            <br>
+            <h3> Pizza Suprema de la Palma</h3>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-        </aside>
-        <section id="contenido">
-            <header class="header">
-                <nav class="nav">
-                    <a href="index.html" class="nav-link logo">Restaurante La Hoja de Palma</a>
-                    <ul class="nav-menu">
-                        <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="menu.html">Menú</a></li>
-                        <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="recetas.html">Recetas</a></li>
-                        <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="reservaciones.html">Reservaciones</a></li>
-                        <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="ubicacion.html">Ubicación</a></li>
-                        <li class="nav-menu-item"><a class="nav-menu-link nav-link" th:href="@{/express}">Express</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <h2>Artículos principales</h2>
-            <article>
-                <header>
-                    Asus Vivobook
-                </header>
-                <p class="descripcion">
-                    <cite>Lorem ipsum dolor sit amet</cite>, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                <figure>
-                    <img src="images/Equipo1.jpg" width="200"/>
-                    <figcaption>Imagen con fines ilustrativos</figcaption>
-                </figure>
-            </article>
-            <article>
-                <header>
-                    Alienware ATD 900
-                </header>
-                <p class="descripcion">
-                    <strong>Lorem ipsum dolor sit amet</strong>, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                <figure>
-                    <img src="images/Equipo2.jpg" width="200"/>
-                    <figcaption>Más vendido</figcaption>
-                </figure>
-            </article>
-            <article>
-                <header>
-                    Alienware ATD 900
-                </header>
-                <p class="descripcion">
-                    <strong>Lorem ipsum dolor sit amet</strong>, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                <figure>
-                    <img src="images/Equipo2.jpg" width="200"/>
-                    <figcaption>Más vendido</figcaption>
-                </figure>
-            </article>
-        </section>
-    </body>
+                <br>
+            <figure>
+                <img src="../static/images/pizza.jpg" width="230" height="150"/>
+            </figure>
+        </p>
+        <br><br>
+        <h3>Sopa Azteca</h3>
+        <p>
+            <br>
+            <img src="images/sopa.jpg" width="230" height="150"/>
+        </p>
+        <br><br>
+        <h3>Spaghetti con Albóndigas</h3>
+        <p>
+            <br>
+            <img src="images/spaghetti.jpg" width="230" height="150"/>
+        </p>
+        <br><br>
+        <h3>Tres Leches</h3>
+        <p>
+            <br>
+            <img src="images/tres leches.jpg" width="230" height="150"/>
+        </p>
+        <br><br>
+
+    </aside>
+    <section id="contenido">
+
+        <br>
+        <h2>¡Bienvenido a nuestra página web!</h2>
+        <br><br>
+        <article>
+            
+            <p class="descripcion">
+                Somos Restaurante <i>La Hoja de Palma</i>.
+            </p><br>
+            <p>Estamos a su disposición para cualquier tipo de pedido, tenemos deliciosa comida a su gusto, puede pasar de un delicioso casado a un dulce tres leches,
+            consulte nuestro menú para ver los platillos diponibles en nuestra selección.</p><br>
+            <p>En el apartado de recetas puede observar algunos platillos que tenemos para que usted mismo los prepare en casa, no hay nada como <i>La Hoja de Palma</i>.</p><br>
+            <p>En caso de que desee vivir la auténtica experiencia gourmette, puede seleccionar el apartado de recervaciones para apartar un lugar en nuestro establecimiento, 
+                y tener un espacio dedicado solamente para su persona.</p><br>
+            <p>Puede verificar donde estamos ubicados, así como nuestro horario de atención al público en el apartado destinado para ello, simplemente dirijase arriba a la derecha
+                y seleccione dicha opción.</p><br>
+            <p>Si prefiere la comodidad de su hogar lo comprendemos, por dicho motivo disponemos de servicio express para que no tenga que abandonar el confort y 
+                el calor de estar en casa,
+                simplemente seleccione la opción, ordene y espere. ¡Nosotros hacemos el resto!.</p><br>
+            <figure style="text-align: center">
+                <img src="images/Restaurante.jpeg" width="1530" height="577"/>
+                <br><br>
+                <figcaption>Un vistazo a nuestro Restaurante</figcaption>
+            </figure>
+            <br>
+        </article>
+
+    </section>
+</body>
 </html>
