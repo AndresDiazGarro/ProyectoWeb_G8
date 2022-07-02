@@ -1,9 +1,12 @@
 package com.proyecto_grupo8.controller;
 
+import com.proyecto_grupo8.domain.Factura;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.*;
+import com.proyecto_grupo8.service.FacturaService;
+import org.springframework.beans.factory.annotation.Autowired;
 
 
 @Controller
@@ -17,4 +20,8 @@ public class IndexController {
         return "index";
     }
     
+    @GetMapping("/express")
+    public String nuevaFactura(Factura factura){
+        return "express";
+    }
 }
