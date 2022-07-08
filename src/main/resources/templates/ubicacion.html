@@ -3,8 +3,9 @@
         <title>La Hoja de Palma</title>
         <meta charset="UTF-8">
         <link href="css/menu.css" rel="stylesheet" type="text/css"/>
+        <link th:href="@{/css/ubicacion.css}" rel="stylesheet" type="text/css"/>
     </head>
-    <body>
+    <body style="background-color: #403001">
         <header class="header">
             <nav class="nav">
                 <a th:href="@{/}" class="nav-link logo">Restaurante La Hoja de Palma</a>
@@ -17,5 +18,32 @@
                 </ul>
             </nav>
         </header>
+        <br>
+        <br>
+        <h2 style="font-size: 48px; color: whitesmoke">Ubicación</h2>
+        <br>
+        <br>
+        <br>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1964.984118854464!2d-84.0664230165779!3d9.936600745519636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e37dd45029e5%3A0xa9697f3a8578913a!2sWWPP%2BC6V%2C%20Barrio%20Escalante%2C%20San%20Jos%C3%A9%2C%2010101!5e0!3m2!1ses!2scr!4v1657260291217!5m2!1ses!2scr" 
+                width="600" height="450" style="border:2; border-color: black" allowfullscreen="" loading="lazy"  
+                referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <br><br><br><br><br>
+        <p style="font-size: 25px; color:whitesmoke">Ubicado en San José, Barrio Escalante. Avenida 9, Calle 31. Frente al restaurante "Saúl Bistro".</p>
+        <br><br><br><br>
+        <h2 style="font-size: 48px; color: whitesmoke">Horarios</h2>
+        <br><br><br>
+        <div class="horarios titulos">
+            <p>Lunes a Viernes</p>
+            <p><i>9AM-10PM</i></p>
+            <p><a style="font-size: 20px" th:href="@{/reservaciones}">Reservar</a></p>
+        </div>
+        <br><br><br>
+        <div class="horarios titulos">
+            <p>Sábados y Domingos</p>
+            <p><i>10AM-8PM</i></p>
+            <p><a style="font-size: 20px" th:href="@{/reservaciones}">Reservar</a></p>
+        </div>
+        <br><br><br>
     </body>
 </html>
