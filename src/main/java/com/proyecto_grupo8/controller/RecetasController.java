@@ -6,10 +6,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 @Slf4j
-public class UbicacionController {
+public class RecetasController {
     
-    @GetMapping("/ubicacion")
-    public String abrirUbicacion(){
-        return "ubicacion";
+    @GetMapping("/recetas")
+    public String abrirRecetas(){
+        return "recetas";
     }
+    
 }

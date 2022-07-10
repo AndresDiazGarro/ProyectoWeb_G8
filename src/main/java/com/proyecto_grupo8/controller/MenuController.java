@@ -6,10 +6,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 @Slf4j
-public class UbicacionController {
-    
-    @GetMapping("/ubicacion")
-    public String abrirUbicacion(){
-        return "ubicacion";
+public class MenuController {
+
+    @GetMapping("/menu")
+    public String abrirMenu() {
+        return "menu";
     }
+
 }

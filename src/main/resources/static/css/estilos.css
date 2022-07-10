@@ -22,47 +22,6 @@
     color: whitesmoke;
 }
 
-#barraIzquierda1 {
-    position: absolute;
-    top: 12%;
-    left: 0;
-    height: 256%;
-    width: 25%;
-    background-color: #403001;
-    color: whitesmoke;
-    padding: 0 40px;
-}
-#barraIzquierda2 {
-    position: absolute;
-    top: 12%;
-    left: 25%;
-    height: 256%;
-    width: 25%;
-    background-color: #403001;
-    color: whitesmoke;
-}
-
-#barraDerecha1 {
-    position: absolute;
-    top: 12%;
-    left: 50%;
-    height: 256%;
-    width: 25%;
-    background-color: #403001;
-    color: whitesmoke;
-    padding: 0 40px;
-}
-#barraDerecha2 {
-    position: absolute;
-    top: 12%;
-    left: 75%;
-    height: 256%;
-    width: 25%;
-    background-color: #403001;
-    color: whitesmoke;
-}
-
-
 #contenido {
     position: absolute;
     top: 12%;

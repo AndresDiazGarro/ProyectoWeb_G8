@@ -1,71 +1,497 @@
-*{
-    margin: 0;
-    box-sizing: border-box;
-}
 
-body{
-    font-family: sans-serif;
-    padding: 90px 20px 0;
-}
-
-.header{
-    background-color:#6CCED9;
-    height: 12%;
-    position: fixed;
-    top: 0;
-    left: 0; 
-    width: 100%;
-}
-
-.footer{
-    position: fixed;
-    bottom: 0;
+.titulo{
+    position: absolute;
+    top: 12%;
     left: 0;
-    height: 7%;
+    height: 12%;
     width: 100%;
-    background-color: #87f29b;
     color: whitesmoke;
-    text-align: center;
+    font-size: 48px;
+    background-color: #403001;
+    padding-top: 2%;
+    padding-left: 2%;
 }
 
-.nav{
-    display: flex;
-    justify-content: space-between;
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-.nav-link{
+#entradas{
+    position: absolute;
+    top: 24%;
+    left: 0;
+    height: 20%;
+    width: 50%;
     color: whitesmoke;
-    text-decoration: none;
+    background-color: #403001;
+    font-size: 27px;
+    padding: 3% 0 0 7%;
 }
 
-.logo{
-    font-size: 30px;
-    font-weight: bold;
-    padding: 0 40px;
-    line-height: 12vh;
+#chifrijo {
+    position: absolute;
+    top: 44%;
+    left: 0;
+    height: 40%;
+    width: 25%;
+    background-color: #403001;
+    color: whitesmoke;
+    padding: 0 2%;
+    padding-left: 7%;
 }
 
-.nav-menu{
-    display: flex;
-    margin-left: 40px;
-    list-style: none;
+#imag_chifrijo{
+    position: absolute;
+    top: 44%;
+    left: 25%;
+    height: 40%;
+    width: 25%;
+    background-color: #403001;
+    padding: 0 2%;
 }
 
-.nav-menu-item{
-    font-size: 18px;
-    margin: 0 10px;
-    line-height: 12vh;
+#patacones {
+    position: absolute;
+    top: 84%;
+    left: 0;
+    height: 40%;
+    width: 25%;
+    background-color: #403001;
+    color: whitesmoke;
+    padding: 0 2%;
+    padding-left: 7%;
 }
 
-.nav-menu-item:hover{
-    background-color: #69AFBF;
-    transition: 0.5s
+#imag_patacones{
+    position: absolute;
+    top: 84%;
+    left: 25%;
+    height: 40%;
+    width: 25%;
+    background-color: #403001;
+    padding: 0 2%;
 }
 
-.nav-menu-link{
-    padding: 8px 12px;
-    border-radius: 4px;
-
+#papas_fritas {
+    position: absolute;
+    top: 124%;
+    left: 0;
+    height: 40%;
+    width: 25%;
+    background-color: #403001;
+    color: whitesmoke;
+    padding: 0 2%;
+    padding-left: 7%;
 }
+
+#imag_papas_fritas{
+    position: absolute;
+    top: 124%;
+    left: 25%;
+    height: 40%;
+    width: 25%;
+    background-color: #403001;
+    padding: 0 2%;
+}
+
+#platillos_principales{
+    position: absolute;
+    top: 164%;
+    left: 0;
+    height: 20%;
+    width: 50%;
+    color: whitesmoke;
+    background-color: #403001;
+    font-size: 27px;
+    padding: 3% 0 0 7%;
+}
+
+#casado {
+    position: absolute;
+    top: 184%;
+    left: 0;
+    height: 40%;
+    width: 25%;
+    background-color: #403001;
+    color: whitesmoke;
+    padding: 0 2%;
+    padding-left: 7%;
+}
+
+#imag_casado{
+    position: absolute;
+    top: 184%;
+    left: 25%;
+    height: 40%;
+    width: 25%;
+    background-color: #403001;
+    padding: 0 2%;
+}
+
+#spaghetti {
+    position: absolute;
+    top: 224%;
+    left: 0;
+    height: 40%;
+    width: 25%;
+    background-color: #403001;
+    color: whitesmoke;
+    padding: 0 2%;
+    padding-left: 7%;
+}
+
+#imag_spaghetti{
+    position: absolute;
+    top: 224%;
+    left: 25%;
+    height: 40%;
+    width: 25%;
+    background-color: #403001;
+    padding: 0 2%;
+}
+
+#pescado {
+    position: absolute;
+    top: 264%;
+    left: 0;
+    height: 40%;
+    width: 25%;
+    background-color: #403001;
+    color: whitesmoke;
+    padding: 0 2%;
+    padding-left: 7%;
+}
+
+#imag_pescado{
+    position: absolute;
+    top: 264%;
+    left: 25%;
+    height: 40%;
+    width: 25%;
+    background-color: #403001;
+    padding: 0 2%;
+}
+
+#postres{
+    position: absolute;
+    top: 304%;
+    left: 0%;
+    height: 20%;
+    width: 50%;
+    color: whitesmoke;
+    background-color: #403001;
+    font-size: 27px;
+    padding: 3% 0 0 7%;
+}
+
+#tres_leches {
+    position: absolute;
+    top: 324%;
+    left: 0;
+    height: 40%;
+    width: 25%;
+    background-color: #403001;
+    color: whitesmoke;
+    padding: 0 2%;
+    padding-left: 7%;
+}
+
+#imag_tres_leches{
+    position: absolute;
+    top: 324%;
+    left: 25%;
+    height: 40%;
+    width: 25%;
+    background-color: #403001;
+    padding: 0 2%;
+}
+
+#helado {
+    position: absolute;
+    top: 364%;
+    left: 0;
+    height: 40%;
+    width: 25%;
+    background-color: #403001;
+    color: whitesmoke;
+    padding: 0 2%;
+    padding-left: 7%;
+}
+
+#imag_helado{
+    position: absolute;
+    top: 364%;
+    left: 25%;
+    height: 40%;
+    width: 25%;
+    background-color: #403001;
+    padding: 0 2%;
+}
+
+#gelatina {
+    position: absolute;
+    top: 404%;
+    left: 0;
+    height: 40%;
+    width: 25%;
+    background-color: #403001;
+    color: whitesmoke;
+    padding: 0 2%;
+    padding-left: 7%;
+}
+
+#imag_gelatina{
+    position: absolute;
+    top: 404%;
+    left: 25%;
+    height: 40%;
+    width: 25%;
+    background-color: #403001;
+    padding: 0 2%;
+}
+
+#acompañamientos{
+    position: absolute;
+    top: 24%;
+    left: 50%;
+    height: 20%;
+    width: 50%;
+    color: whitesmoke;
+    background-color: #403001;
+    font-size: 27px;
+    padding: 3% 0 0 7%;
+    overflow :visible;
+}
+
+#chicharrones {
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    height: 40%;
+    width: 25%;
+    background-color: #403001;
+    color: whitesmoke;
+    padding: 0 2%;
+    padding-left: 7%;
+}
+
+#imag_chicharrones{
+    position: absolute;
+    top: 44%;
+    left: 75%;
+    height: 40%;
+    width: 25%;
+    background-color: #403001;
+    padding-right: 2%;
+    overflow :visible;
+}
+
+#frijoles {
+    position: absolute;
+    top: 84%;
+    left: 50%;
+    height: 40%;
+    width: 25%;
+    background-color: #403001;
+    color: whitesmoke;
+    padding: 0 2%;
+    padding-left: 7%;
+}
+
+#imag_frijoles{
+    position: absolute;
+    top: 84%;
+    left: 75%;
+    height: 40%;
+    width: 25%;
+    background-color: #403001;
+    padding-right: 2%;
+    overflow :visible;
+}
+
+#nachos {
+    position: absolute;
+    top: 124%;
+    left: 50%;
+    height: 40%;
+    width: 25%;
+    background-color: #403001;
+    color: whitesmoke;
+    padding: 0 2%;
+    padding-left: 7%;
+}
+
+#imag_nachos{
+    position: absolute;
+    top: 124%;
+    left: 75%;
+    height: 40%;
+    width: 25%;
+    background-color: #403001;
+    padding-right: 2%;
+    overflow :visible;
+}
+
+#arroces{
+    position: absolute;
+    top: 164%;
+    left: 50%;
+    height: 20%;
+    width: 50%;
+    color: whitesmoke;
+    background-color: #403001;
+    font-size: 27px;
+    padding: 3% 0 0 7%;
+    overflow :visible;
+}
+
+#camarones {
+    position: absolute;
+    top: 184%;
+    left: 50%;
+    height: 40%;
+    width: 25%;
+    background-color: #403001;
+    color: whitesmoke;
+    padding: 0 2%;
+    padding-left: 7%;
+}
+
+#imag_camarones{
+    position: absolute;
+    top: 184%;
+    left: 75%;
+    height: 40%;
+    width: 25%;
+    background-color: #403001;
+    padding-right: 2%;
+    overflow :visible;
+}
+
+#pollo {
+    position: absolute;
+    top: 224%;
+    left: 50%;
+    height: 40%;
+    width: 25%;
+    background-color: #403001;
+    color: whitesmoke;
+    padding: 0 2%;
+    padding-left: 7%;
+}
+
+#imag_pollo{
+    position: absolute;
+    top: 224%;
+    left: 75%;
+    height: 40%;
+    width: 25%;
+    background-color: #403001;
+    padding-right: 2%;
+    overflow :visible;
+}
+
+#jardinero {
+    position: absolute;
+    top: 264%;
+    left: 50%;
+    height: 40%;
+    width: 25%;
+    background-color: #403001;
+    color: whitesmoke;
+    padding: 0 2%;
+    padding-left: 7%;
+}
+
+#imag_jardinero{
+    position: absolute;
+    top: 264%;
+    left: 75%;
+    height: 40%;
+    width: 25%;
+    background-color: #403001;
+    padding-right: 2%;
+    overflow :visible;
+}
+
+#bebidas{
+    position: absolute;
+    top: 304%;
+    left: 50%;
+    height: 20%;
+    width: 50%;
+    color: whitesmoke;
+    background-color: #403001;
+    font-size: 27px;
+    padding: 3% 0 0 7%;
+    overflow :visible;
+}
+
+#limonada {
+    position: absolute;
+    top: 324%;
+    left: 50%;
+    height: 40%;
+    width: 25%;
+    background-color: #403001;
+    color: whitesmoke;
+    padding: 0 2%;
+    padding-left: 7%;
+}
+
+#imag_limonada{
+    position: absolute;
+    top: 324%;
+    left: 75%;
+    height: 40%;
+    width: 25%;
+    background-color: #403001;
+    padding-right: 2%;
+    overflow :visible;
+}
+
+#te {
+    position: absolute;
+    top: 364%;
+    left: 50%;
+    height: 40%;
+    width: 25%;
+    background-color: #403001;
+    color: whitesmoke;
+    padding: 0 2%;
+    padding-left: 7%;
+}
+
+#imag_te{
+    position: absolute;
+    top: 364%;
+    left: 75%;
+    height: 40%;
+    width: 25%;
+    background-color: #403001;
+    padding-right: 2%;
+    overflow :visible;
+}
+
+#chocolate {
+    position: absolute;
+    top: 404%;
+    left: 50%;
+    height: 40%;
+    width: 25%;
+    background-color: #403001;
+    color: whitesmoke;
+    padding: 0 2%;
+    padding-left: 7%;
+}
+
+#imag_chocolate{
+    position: absolute;
+    top: 404%;
+    left: 75%;
+    height: 40%;
+    width: 25%;
+    background-color: #403001;
+    padding-right: 2%;
+    overflow :visible;
+}
+
+
+
+

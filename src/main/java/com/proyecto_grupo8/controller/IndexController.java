@@ -18,20 +18,4 @@ public class IndexController {
         log.info("Ejecutando el sistema de Restaurante Hoja de Palma");
         return "index";
     }
-
-    @GetMapping("/express")
-    public String nuevaFactura(Factura factura) {
-        return "express";
-    }
-
-    @GetMapping("/menu")
-    public String menu(Model producto) {
-        return "menu";
-    }
-   
-
-  /*  @GetMapping("/express")
-    public String nuevaFactura(Factura factura) {
-        return "express";
-    }*/
 }
