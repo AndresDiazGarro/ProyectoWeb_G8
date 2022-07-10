@@ -5,7 +5,7 @@
         <link href="css/navegacion.css" rel="stylesheet" type="text/css"/>
         <link th:href="@{/css/ubicacion.css}" rel="stylesheet" type="text/css"/>
     </head>
-    <body style="background-color: #403001">
+    <body>
         <header class="header">
             <nav class="nav">
                 <a th:href="@{/}" class="nav-link logo">Restaurante La Hoja de Palma</a>
@@ -18,9 +18,8 @@
                 </ul>
             </nav>
         </header>
-        <br>
-        <br>
-        <h2 style="font-size: 48px; color: whitesmoke">Ubicación</h2>
+        <h2 class="titulo">Ubicación</h2>
+        <section class="contenido">
         <br>
         <br>
         <br>
@@ -33,17 +32,18 @@
         <br><br><br><br>
         <h2 style="font-size: 48px; color: whitesmoke">Horarios</h2>
         <br><br><br>
-        <div class="horarios titulos">
+        <div class="cuad_horarios horarios">
             <p>Lunes a Viernes</p>
             <p><i>9AM-10PM</i></p>
             <p><a style="font-size: 20px" th:href="@{/reservaciones}">Reservar</a></p>
         </div>
         <br><br><br>
-        <div class="horarios titulos">
+        <div class="cuad_horarios horarios">
             <p>Sábados y Domingos</p>
             <p><i>10AM-8PM</i></p>
             <p><a style="font-size: 20px" th:href="@{/reservaciones}">Reservar</a></p>
         </div>
         <br><br><br>
+        </section>
     </body>
 </html>
