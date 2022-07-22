@@ -1,10 +1,9 @@
 <html>
     <head>
-       <title>La Hoja de Palma</title>
+        <title>La Hoja de Palma</title>
         <meta charset="UTF-8">
         <link href="css/navegacion.css" rel="stylesheet" type="text/css"/>
         <link href="css/express.css" rel="stylesheet" type="text/css"/>
-        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <header class="header">
@@ -24,8 +23,123 @@
         <h2 class="titulo">Express</h2>
         <br>
         <br>
-        <h3>Platillos principales</h3>
-        
+        <p class="platillos_principales">Platillos principales</p>
+        <div id="producto">
+            <div id="platillo1" style="padding-left: 1%; padding-top: 1%">
+                <p style="font-size: 24px"><strong>Casado</strong></p>
+                <br>
+                <p>Arroz, Frijoles y...</p>
+                <br>
+                <p><i>₡3.500</i></p>
+                <br>
+                <a th:href="@{/ordenar_producto}" id="ordenar_platillo1">Ordenar</a>
+            </div>
+            <div id="imag_platillo1">
+                <img src="/images/casado.jpg" width="235" height="175"/>
+            </div>
+            <div id="platillo2" style="padding-left: 1%;">
+                <p style="font-size: 20px"><strong>Spaghetti con <br> Albóndigas</strong></p>
+                <br>
+                <p>Fideos con Salsa...</p>
+                <br>
+                <p><i>₡2.000</i></p>
+                <br>
+                <a th:href="@{/ordenar_producto}" id="ordenar_platillo2">Ordenar</a>
+            </div>
+            <div id="imag_platillo2">
+                <img src="/images/spaghetti.jpg" width="235" height="175"/>
+            </div>
+            <div id="platillo3" style="padding-left: 1%;">
+                <p style="font-size: 20px"><strong>Pescado <br> Entero</strong></p>
+                <br>
+                <p>Pargo Rojo Frito...</p>
+                <br>
+                <p><i>₡3.000</i></p>
+                <br>
+                <a th:href="@{/ordenar_producto}" id="ordenar_platillo3">Ordenar</a>
+            </div>
+            <div id="imag_platillo3">
+                <img src="/images/pescado.jpg" width="235" height="175"/>
+            </div>
+        </div>
+        <p class="acompañamientos">Acompañamientos</p>
+        <div id="producto2">
+            <div id="acompañamiento1" style="padding-left: 1%; padding-top: 1%">
+                <p style="font-size: 24px"><strong>Chicharrones</strong></p>
+                <br>
+                <p>Costilla de Cerdo...</p>
+                <br>
+                <p><i>₡1.500</i></p>
+                <br>
+                <a th:href="@{/ordenar_producto}" id="ordenar_acompañamiento1">Ordenar</a>
+            </div>
+            <div id="imag_acompañamiento1">
+                <img src="/images/chicharrones.jpg" width="235" height="175"/>
+            </div>
+            <div id="acompañamiento2" style="padding-left: 1%;">
+                <p style="font-size: 20px"><strong>Frijoles <br> Molidos</strong></p>
+                <br>
+                <p>Frijoles Molidos con...</p>
+                <br>
+                <p><i>₡1.300</i></p>
+                <br>
+                <a th:href="@{/ordenar_producto}" id="ordenar_acompañamietno2">Ordenar</a>
+            </div>
+            <div id="imag_acompañamiento2">
+                <img src="/images/frijoles.png" width="235" height="175"/>
+            </div>
+            <div id="acompañamiento3" style="padding-left: 1%; padding-top: 1%">
+                <p style="font-size: 24px"><strong>Nachos</strong></p>
+                <br>
+                <p>Tortillas Fritas en...</p>
+                <br>
+                <p><i>₡1.300</i></p>
+                <br>
+                <a th:href="@{/ordenar_producto}" id="ordenar_acompañamiento3">Ordenar</a>
+            </div>
+            <div id="imag_acompañamiento3">
+                <img src="/images/nachos.jpg" width="235" height="175"/>
+            </div>
+        </div>
+        <p class="postres">Postres</p>
+        <div id="producto3">
+            <div id="postre1" style="padding-left: 1%; padding-top: 1%">
+                <p style="font-size: 24px"><strong>Tres Leches</strong></p>
+                <br>
+                <p>Pastel bañado con...</p>
+                <br>
+                <p><i>₡1.500</i></p>
+                <br>
+                <a th:href="@{/ordenar_producto}" id="ordenar_postre1">Ordenar</a>
+            </div>
+            <div id="imag_acompañamiento1">
+                <img src="/images/tres leches.jpg" width="235" height="175"/>
+            </div>
+            <div id="postre2" style="padding-left: 1%;">
+                <p style="font-size: 20px"><strong>Cono de <br> Helado</strong></p>
+                <br>
+                <p>Sabores a elegir:...</p>
+                <br>
+                <p><i>₡1.000</i></p>
+                <br>
+                <a th:href="@{/ordenar_producto}" id="ordenar_postre2">Ordenar</a>
+            </div>
+            <div id="imag_postre2">
+                <img src="/images/helado.jpg" width="235" height="175"/>
+            </div>
+            <div id="postre3" style="padding-left: 1%; padding-top: 1%">
+                <p style="font-size: 24px"><strong>Gelatina</strong></p>
+                <br>
+                <p>Sabores a elegir:....</p>
+                <br>
+                <p><i>₡1.000</i></p>
+                <br>
+                <a th:href="@{/ordenar_producto}" id="ordenar_postre3">Ordenar</a>
+            </div>
+            <div id="imag_postre3">
+                <img src="/images/gelatina.jpg" width="235" height="175"/>
+            </div>
+        </div>
         <section id="piePagina">
             <p>La Hoja de Palma &COPY; Derechos Reservados 2022 </p>
             <p>&phone; 2546-5598</p>
