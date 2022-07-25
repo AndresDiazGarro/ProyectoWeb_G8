@@ -10,6 +10,6 @@ public class UbicacionController {
     
     @GetMapping("/ubicacion")
     public String abrirUbicacion(){
-        return "ubicacion";
+        return "ubicacion/ubicacion";
     }
 }

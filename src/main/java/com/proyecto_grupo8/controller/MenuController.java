@@ -10,7 +10,7 @@ public class MenuController {
 
     @GetMapping("/menu")
     public String abrirMenu() {
-        return "menu";
+        return "/menu/menu";
     }
 
 }

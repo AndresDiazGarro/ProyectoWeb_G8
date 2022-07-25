@@ -10,7 +10,7 @@ public class ReservacionesController {
 
     @GetMapping("/reservaciones")
     public String abrirReservaciones() {
-        return "reservaciones";
+        return "reservaciones/reservaciones";
     }
 
 }
