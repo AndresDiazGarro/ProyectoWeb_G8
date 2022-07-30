@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>La Hoja de Palma</title>
+        <meta charset="UTF-8">
+        <style>
+            .contenido {
+                text-align: center;
+                border-radius: 20px;
+                top: 50%;
+                left: 50%;
+                margin-left: -250px;
+                margin-top: -75px;
+                width: 500px;
+                height: 150px;
+                background-color: #6CCED9;
+                position: fixed;
+            }
+            
+            
+        </style> 
+    </head>
+    <body>
+        <div class="contenido">
+            <h2>Página bloqueada</h2>
+            <p>No tiene autorización para ingresar a este apartado</p>
+            <a th:href="@{/}">Regresar</a>
+        </div>
+    </body>
+</html>
