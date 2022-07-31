@@ -1,12 +1,66 @@
-
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>La Hoja de Palma</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link th:href="@{css/navegacion.css}" rel="stylesheet" type="text/css"/>
+        <style>
+            .titulo{
+                position: absolute;
+                top: 12%;
+                left: 0;
+                height: 12%;
+                width: 100%;
+                color: whitesmoke;
+                font-size: 48px;
+                background-color: #403001;
+                padding-top: 2%;
+                padding-left: 2%;
+            }
+
+            .descripcion{
+                position: absolute;
+                top: 24%;
+                left: 0;
+                height: 12%;
+                width: 100%;
+                color: whitesmoke;
+                font-size: 36px;
+                background-color: #403001;
+                padding-top: 2%;
+                padding-left: 2%;
+            }
+
+            .precio{
+                position: absolute;
+                top: 36%;
+                left: 0;
+                height: 16%;
+                width: 100%;
+                color: whitesmoke;
+                font-size: 36px;
+                background-color: #403001;
+                padding-top: 2%;
+                padding-left: 2%;
+            }
+
+            .contenido{
+                position: absolute;
+                top: 52%;
+                left: 0%;
+                height: auto;
+                width: 100%;
+                color: whitesmoke;
+                background-color: #403001;
+                padding-top: 2%;
+                padding-left: 2%;
+            }
+        </style>
     </head>
     <body>
-        <div>TODO write content</div>
+        <header th:replace="layout/plantilla :: header"/>
+        <br>
+        <br>
+        <h2 class="titulo">Factura</h2>
     </body>
     
     <footer th:replace="layout/plantilla :: footer" />

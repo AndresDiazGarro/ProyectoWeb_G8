@@ -9,31 +9,20 @@
     <body>
         <header th:fragment="header" class="header">
             <nav class="nav">
-                <a th:href="@{/}" class="logo nav-link">TechShop</a>
-                <ul class="nav-menu" sec:authorize="hasRole('ROLE_VENDEDOR')">
-                    <li class="nav-menu-item">
-                        <a th:href="@{/cliente/listado}" class="nav-menu-link nav-link"
-                           th:text="#{plantilla.clientes}">Clientes</a>
-                    </li>
-                    <li class="nav-menu-item">
-                        <a th:href="@{/categoria/listado}" class="nav-menu-link nav-link"
-                           th:text="#{plantilla.categorias}">Categorías</a>
-                    </li>
-                    <li class="nav-menu-item">
-                        <a th:href="@{/articulo/listado}" class="nav-menu-link nav-link"
-                           th:text="#{plantilla.articulos}">Articulos</a>
-                    </li>
-                    <li class="nav-menu-item">
-                        <a th:href="@{/admin/listado}" class="nav-menu-link nav-link"
-                           sec:authorize="hasRole('ROLE_ADMIN')">Admin</a>
-                    </li>
+                <a th:href="@{/}" class="nav-link logo">Restaurante La Hoja de Palma</a>
+                <ul class="nav-menu">
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" th:href="@{/menu}">Menú</a></li>
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" th:href="@{/recetas}">Recetas</a></li>
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" th:href="@{/reservaciones}">Reservaciones</a></li>
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" th:href="@{/ubicacion}">Ubicación y Horario</a></li>
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" th:href="@{/express}">Express</a></li>
                 </ul>
             </nav>
         </header>
-        
+
         <footer th:fragment="footer" class="footer">
             <div>
-               La Hoja de Palma &COPY; Derechos Reservados 2022 |
+                La Hoja de Palma &COPY; Derechos Reservados 2022 |
                 &phone; 2546-5598 |
                 User: <span sec:authentication="name">xx</span> |
                 Roles: <span sec:authentication="principal.authorities">zz</span> |

@@ -17,13 +17,13 @@ public class Cliente implements Serializable{
     private Long cedula;
     String nombre;
     String apellidos;
-    int telefono;
+    String telefono;
     String direccion;
 
     public Cliente() {
     }
 
-    public Cliente(String nombre, String apellidos, int telefono, String direccion) {
+    public Cliente(String nombre, String apellidos, String telefono, String direccion) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.telefono = telefono;

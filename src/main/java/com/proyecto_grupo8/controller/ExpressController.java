@@ -40,25 +40,60 @@ public class ExpressController {
         return "/express/express";
     }
 
-    @GetMapping("/orden/nueva")
-    public String nuevaOrden(Producto producto, Model model) {
-        var productos = productoService.getProductos();
-        model.addAttribute("productos", productos);
-        return "/express/orden";
+    @GetMapping("/orden/casado")
+    public String nuevaOrden_Casado(Factura factura, Cliente cliente, Tarjeta tarjeta, Model model) {
+        return "/express/orden_casado";
+    }
+    
+    @GetMapping("/orden/spaghetti")
+    public String nuevaOrden_Spaghetti(Factura factura, Cliente cliente, Tarjeta tarjeta, Model model) {
+        return "/express/orden_spaghetti";
+    }
+    
+    @GetMapping("/orden/pescado")
+    public String nuevaOrden_Pescado(Factura factura, Cliente cliente, Tarjeta tarjeta, Model model) {
+        return "/express/orden_pescado";
+    }
+    
+    @GetMapping("/orden/chicharrones")
+    public String nuevaOrden_Chicharrones(Factura factura, Cliente cliente, Tarjeta tarjeta, Model model) {
+        return "/express/orden_chicharrones";
+    }
+    
+    @GetMapping("/orden/frijoles")
+    public String nuevaOrden_Frijoles(Factura factura, Cliente cliente, Tarjeta tarjeta, Model model) {
+        return "/express/orden_frijoles";
+    }
+    
+    @GetMapping("/orden/nachos")
+    public String nuevaOrden_Nachos(Factura factura, Cliente cliente, Tarjeta tarjeta, Model model) {
+        return "/express/orden_nachos";
+    }
+    
+    @GetMapping("/orden/tres_leches")
+    public String nuevaOrden_Tres_Leches(Factura factura, Cliente cliente, Tarjeta tarjeta, Model model) {
+        return "/express/orden_tres_leches";
+    }
+    
+    @GetMapping("/orden/cono")
+    public String nuevaOrden_Cono(Factura factura, Cliente cliente, Tarjeta tarjeta, Model model) {
+        return "/express/orden_cono";
+    }
+    
+    @GetMapping("/orden/gelatina")
+    public String nuevaOrden_Gelatina(Factura factura, Cliente cliente, Tarjeta tarjeta, Model model) {
+        return "/express/orden_gelatina";
     }
 
     @GetMapping("/orden/mostrar")
     public String mostrarOrden(Factura factura, Model model) {
         factura = facturaService.getFactura(factura);
         model.addAttribute("factura", factura);
-        return "/express/orden";
+        return "/express/factura_orden";
     }
 
-    @PostMapping("orden//guardar")
-    public String guardarOrden(Factura factura, Cliente cliente, 
-            Tarjeta tarjeta) {
-        clienteService.save(cliente);
-        tarjetaService.save(tarjeta);
+    @PostMapping("orden/guardar")
+    public String guardarOrden(Factura factura) {
         facturaService.save(factura);
         return "/express/factura_orden";
     }

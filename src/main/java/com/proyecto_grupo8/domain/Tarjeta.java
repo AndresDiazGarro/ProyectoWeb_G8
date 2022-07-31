@@ -3,7 +3,6 @@ package com.proyecto_grupo8.domain;
 import java.io.Serializable;
 import lombok.Data;
 import javax.persistence.*;
-import java.sql.Date;
 
 @Data
 @Entity
@@ -16,15 +15,15 @@ public class Tarjeta implements Serializable{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long numTarjeta;
     String titularTerjeta;
-    Date fechaExpiracion;
+    String fechaExpiracion;
+    int cvc;
 
     public Tarjeta() {
     }
 
-    public Tarjeta(String titularTerjeta, Date fechaExpiracion) {
+    public Tarjeta(String titularTerjeta, String fechaExpiracion, int cvc) {
         this.titularTerjeta = titularTerjeta;
         this.fechaExpiracion = fechaExpiracion;
+        this.cvc = cvc;
     }
-    
-    
 }
