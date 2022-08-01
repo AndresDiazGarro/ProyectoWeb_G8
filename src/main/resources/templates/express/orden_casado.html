@@ -2,7 +2,10 @@
     <head>
         <title>La Hoja de Palma</title>
         <meta charset="UTF-8">
-        <link th:href="@{css/navegacion.css}" rel="stylesheet" type="text/css"/>
+        <link href="css/navegacion.css" rel="stylesheet" type="text/css"/>
+        <link href="css/express.css" rel="stylesheet" type="text/css"/>
+      <!--  <link th:href="@{css/navegacion.css}" rel="stylesheet" type="text/css"/> -->
+      </head>
         <style>
             .titulo{
                 position: absolute;
@@ -55,9 +58,8 @@
                 padding-left: 2%;
             }
         </style>
-    </head>
     <body>
-        <header th:replace="layout/plantilla :: header"/>
+       <header th:replace="layout/plantilla :: header"/>
         <br>
         <br>
         <h2 class="titulo">Casado</h2>
