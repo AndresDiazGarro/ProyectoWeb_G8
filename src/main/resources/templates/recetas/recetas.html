@@ -1,16 +1,57 @@
 <html>
-    <head>
-        <title>La Hoja de Palma</title>
-        <meta charset="UTF-8">
-        <link href="css/navegacion.css" rel="stylesheet" type="text/css"/>
-        <link href="css/recetas.css" rel="stylesheet" type="text/css"/>
+    <head th:replace="layout/plantilla :: head">
+        <title>Restaurante La Hoja de Palma</title>
     </head>
     <body>
         <header th:replace="layout/plantilla :: header"/>
         <br>
         <br>
         <h2 class="titulo">Recetas Disponibles</h2>
-        
-       <footer th:replace="layout/plantilla :: footer" />
-    </body>
+
+        <aside id="barraLateral" style="text-align: center">
+            <br>
+            <h2 >Recetas Populares</h2>
+            <br>
+            <h3> Pizza Suprema de la Palma</h3>
+            <p>
+            <figure>
+                <img src="/images/pizza.jpg" width="230" height="150"/>
+            </figure>
+        </p>
+        <a  style="color: white; font-size: 20px" th:href="@{/orden/casado}">Ver Platillo</a>
+
+        <br><br>
+
+        <h3>Spaghetti con Albóndigas</h3>
+        <p>
+            <br>
+            <img src="/images/spaghetti.jpg" width="230" height="150"/>
+        </p>
+        <a  style="color: white; font-size: 20px" th:href="@{/orden/casado}">Ver Platillo</a>
+        <br><br>
+        <h3>Pescado Entero</h3>
+        <p>
+            <br>
+            <img src="/images/pescado.jpg" width="230" height="150"/>
+        </p>
+        <a  style="color: white; font-size: 20px" th:href="@{/orden/casado}">Ver Platillo</a>
+        <br><br><br>
+    </aside>
+
+   
+        <section id="inicio" style="color: white" >
+         <div class="container">
+                <div class="row">
+                    <div class="col-md-30 mx-12">
+                        
+                        <div class="col-md-30 mx-12">
+                                <h3>Patacones</h3>
+                                
+                    </div>
+               </div>
+         </div>
+    </section>
+
+    <footer th:replace="layout/plantilla :: footer" />
+</body>
 </html>

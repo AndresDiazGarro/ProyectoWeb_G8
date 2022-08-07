@@ -2,33 +2,83 @@
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns="http://www.w3.org/1999/xhtml"
       xmlns:sec="http://thymeleaf.org/extras/spring-security">
-    <head>
-        <title>TechShop</title>
-        <meta charset="UTF-8">
+    <head th:fragment="head">
+        <title>La Hoja de Palma</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+        <link rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.css}"/>
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+        <link href="css/navegacion.css" rel="stylesheet" type="text/css"/>
+        <link href="css/menu.css" rel="stylesheet" type="text/css"/>
+        <link href="css/recetas.css" rel="stylesheet" type="text/css"/>
+        <link href="css/reservaciones.css" rel="stylesheet" type="text/css"/>
+        <link th:href="@{/css/ubicacion.css}" rel="stylesheet" type="text/css"/>
+        <link href="css/express.css" rel="stylesheet" type="text/css"/>
+        <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+        <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+        <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
     </head>
     <body>
         <header th:fragment="header" class="header">
-            <nav class="nav">
-                <a th:href="@{/}" class="nav-link logo">Restaurante La Hoja de Palma</a>
-                <ul class="nav-menu">
-                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" th:href="@{/menu}">Menú</a></li>
-                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" th:href="@{/recetas}">Recetas</a></li>
-                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" th:href="@{/reservaciones}">Reservaciones</a></li>
-                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" th:href="@{/ubicacion}">Ubicación y Horario</a></li>
-                    <li class="nav-menu-item"><a class="nav-menu-link nav-link" th:href="@{/express}">Express</a></li>
-                </ul>
+            <nav class="navbar navbar-expand-sm p-3 navbar-brand" style="background-color:#6CCED9; font-size: 20px ">
+                <div class="container">
+                    <a th:href="@{/}" class="navbar-brand" style="font-size: 30px; text-align: left; color: white; ">Restaurante La Hoja de Palma</a>
+                    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav" sec:authorize="hasRole('ROLE_USER')">
+                            <li class="nav-item px-2">
+                                <a class="nav-menu-link nav-link nav-menu-link " th:href="@{/menu}"
+                                   text="Menu">Menú</a>
+                            </li>
+                            <li class="nav-item px-2">
+                                <a class="nav-menu-link nav-link" th:href="@{/recetas}"
+                                   th:text="Recetas">Recetas</a>
+                            </li>
+                            <li class="nav-item px-2">
+                                <a class="nav-menu-link nav-link" th:href="@{/reservaciones}"
+                                   th:text="Reservaciones">Reservaciones</a>
+                            </li>
+                            <li class="nav-item px-2">
+                                <a class="nav-menu-link nav-link" th:href="@{/ubicacion}"
+                                   th:text="Ubicacion">Ubicación y Horario</a>
+                            </li>
+                            <li class="nav-item px-2">
+                                <a class="nav-menu-link nav-link" th:href="@{/express}"
+                                   th:text="Express">Express</a>
+                            </li>
+                            
+                            <li class="nav-item px-2"  sec:authorize="hasRole('ROLE_ADMIN')">
+                                <a class="nav-menu-link nav-link" th:href="@{/ubicacion}"
+                                   th:text="Ingresos">Ingresos</a>
+                            </li>
+                            
+                        </ul>
+                        <ul sec:authorize="isAuthenticated()" class="navbar-nav ml-auto">
+                            <li class="nav-item mr-3">
+                                <a href="#" class="nav-link">
+                                    <i class="fas fa-user"></i>
+                                    <span sec:authentication="name">Usuario</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <form method="POST" th:action="@{/logout}">
+                                    <a href="#" onclick="this.parentNode.submit();" class="nav-link">
+                                        <i class="fas fa-user-times"></i> Salir
+                                    </a>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>                    
+                </div>
             </nav>
         </header>
 
         <footer th:fragment="footer" class="footer">
             <div>
                 La Hoja de Palma &COPY; Derechos Reservados 2022 |
-                &phone; 2546-5598 |
-                User: <span sec:authentication="name">xx</span> |
-                Roles: <span sec:authentication="principal.authorities">zz</span> |
-                <form method="POST" th:action="@{/logout}" style="display: inline;">
-                    <a href="#" onclick="this.parentNode.submit()">Salir</a>
-
+                &phone; 2546-5598
             </div>
         </footer>
     </body>

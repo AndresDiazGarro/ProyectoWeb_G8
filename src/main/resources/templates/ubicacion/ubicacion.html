@@ -1,9 +1,6 @@
 <html>
-    <head>
-        <title>La Hoja de Palma</title>
-        <meta charset="UTF-8">
-        <link href="css/navegacion.css" rel="stylesheet" type="text/css"/>
-        <link th:href="@{/css/ubicacion.css}" rel="stylesheet" type="text/css"/>
+    <head th:replace="layout/plantilla :: head">
+        <title>Restaurante La Hoja de Palma</title>
     </head>
     <body>
         <header th:replace="layout/plantilla :: header"/>
@@ -18,9 +15,9 @@
         </iframe>
         <br><br><br><br><br>
         <p style="font-size: 25px; color:whitesmoke">Ubicado en San José, Barrio Escalante. Avenida 9, Calle 31. Frente al restaurante "Saúl Bistro".</p>
-        <br><br><br><br>
+        <br>
         <h2 style="font-size: 48px; color: whitesmoke">Horarios</h2>
-        <br><br><br>
+        <br>
         <div class="cuad_horarios horarios">
             <p>Lunes a Viernes</p>
             <p><i>9AM-10PM</i></p>
@@ -32,7 +29,7 @@
             <p><i>10AM-8PM</i></p>
             <p><a style="font-size: 20px" th:href="@{/reservaciones}">Reservar</a></p>
         </div>
-        <br><br><br>
+        <br><br><br><br><br>
         </section>
         
        <footer th:replace="layout/plantilla :: footer" />

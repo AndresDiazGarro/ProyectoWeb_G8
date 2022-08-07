@@ -11,3 +11,31 @@
     padding-left: 2%;
 }
 
+#barraLateral {
+    position: absolute;
+    top: 12%;
+    right: 0;
+    height: auto;
+    width: 15%;
+    background-color: #A68B03;
+    color: whitesmoke;
+}
+
+#contenido {
+    position: absolute;
+    top: 12%;
+    left: 0;
+    height: auto;
+    width: 85%;
+    background-color: #403001;
+    color: whitesmoke;
+    overflow: visible;
+}
+
+#inicio{
+    position: absolute;
+    top: 30%;
+    padding-right: 2%;
+    background-color: #403001;
+}
+
