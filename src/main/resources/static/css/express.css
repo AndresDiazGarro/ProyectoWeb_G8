@@ -42,17 +42,6 @@
     width: 17%;
 }
 
-#ordenar_platillo1{
-    position: absolute;
-    height: 15%;
-    width: 40%;
-    background-color: #A68B03;
-    color: whitesmoke;
-    font-size: 18px;
-    text-align: center;
-    padding: 1%;
-}
-
 #imag_platillo1{
     position: absolute;
     top: 16%;
@@ -68,17 +57,6 @@
     width: 17%;
 }
 
-#ordenar_platillo2{
-    position: absolute;
-    height: 15%;
-    width: 40%;
-    background-color: #A68B03;
-    color: whitesmoke;
-    font-size: 18px;
-    text-align: center;
-    padding: 1%;
-}
-
 #imag_platillo2{
     position: absolute;
     top: 16%;
@@ -92,17 +70,6 @@
     left: 68%;
     height: 61%;
     width: 17%;
-}
-
-#ordenar_platillo3{
-    position: absolute;
-    height: 15%;
-    width: 40%;
-    background-color: #A68B03;
-    color: whitesmoke;
-    font-size: 18px;
-    text-align: center;
-    padding: 1%;
 }
 
 #imag_platillo3{
@@ -142,17 +109,6 @@
     width: 17%;
 }
 
-#ordenar_acompañamiento1{
-    position: absolute;
-    height: 15%;
-    width: 40%;
-    background-color: #A68B03;
-    color: whitesmoke;
-    font-size: 18px;
-    text-align: center;
-    padding: 1%;
-}
-
 #imag_acompañamiento1{
     position: absolute;
     top: 16%;
@@ -168,17 +124,6 @@
     width: 17%;
 }
 
-#ordenar_acompañamietno2{
-    position: absolute;
-    height: 15%;
-    width: 40%;
-    background-color: #A68B03;
-    color: whitesmoke;
-    font-size: 18px;
-    text-align: center;
-    padding: 1%;
-}
-
 #imag_acompañamiento2{
     position: absolute;
     top: 16%;
@@ -192,17 +137,6 @@
     left: 68%;
     height: 61%;
     width: 17%;
-}
-
-#ordenar_acompañamiento3{
-    position: absolute;
-    height: 15%;
-    width: 40%;
-    background-color: #A68B03;
-    color: whitesmoke;
-    font-size: 18px;
-    text-align: center;
-    padding: 1%;
 }
 
 #imag_acompañamiento3{
@@ -242,17 +176,6 @@
     width: 17%;
 }
 
-#ordenar_postre1{
-    position: absolute;
-    height: 15%;
-    width: 40%;
-    background-color: #A68B03;
-    color: whitesmoke;
-    font-size: 18px;
-    text-align: center;
-    padding: 1%;
-}
-
 #imag_postre1{
     position: absolute;
     top: 16%;
@@ -268,17 +191,6 @@
     width: 17%;
 }
 
-#ordenar_postre2{
-    position: absolute;
-    height: 15%;
-    width: 40%;
-    background-color: #A68B03;
-    color: whitesmoke;
-    font-size: 18px;
-    text-align: center;
-    padding: 1%;
-}
-
 #imag_postre2{
     position: absolute;
     top: 16%;
@@ -292,17 +204,6 @@
     left: 68%;
     height: 61%;
     width: 17%;
-}
-
-#ordenar_postre3{
-    position: absolute;
-    height: 15%;
-    width: 40%;
-    background-color: #A68B03;
-    color: whitesmoke;
-    font-size: 18px;
-    text-align: center;
-    padding: 1%;
 }
 
 #imag_postre3{

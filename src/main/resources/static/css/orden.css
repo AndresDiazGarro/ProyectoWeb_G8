@@ -11,20 +11,20 @@
     padding-left: 2%;
 }
 
-.descripcion{
+.descripcion_orden{
     position: absolute;
     top: 24%;
     left: 0;
     height: 12%;
     width: 100%;
     color: whitesmoke;
-    font-size: 36px;
+    font-size: 32px;
     background-color: #403001;
     padding-top: 2%;
     padding-left: 2%;
 }
 
-.precio{
+.precio_orden{
     position: absolute;
     top: 36%;
     left: 0;
@@ -37,15 +37,16 @@
     padding-left: 2%;
 }
 
-.contenido{
+.contenido_orden{
     position: absolute;
     top: 52%;
     left: 0%;
     height: auto;
     width: 100%;
-    color: whitesmoke;
     background-color: #403001;
     padding-top: 2%;
     padding-left: 2%;
 }
+
+
 

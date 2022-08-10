@@ -1,121 +1,104 @@
 <html>
-    <head>
-        <title>La Hoja de Palma</title>
-        <meta charset="UTF-8">
-        <link th:href="@{css/navegacion.css}" rel="stylesheet" type="text/css"/>
-        <style>
-            .titulo{
-                position: absolute;
-                top: 12%;
-                left: 0;
-                height: 12%;
-                width: 100%;
-                color: whitesmoke;
-                font-size: 48px;
-                background-color: #403001;
-                padding-top: 2%;
-                padding-left: 2%;
-            }
-
-            .descripcion{
-                position: absolute;
-                top: 24%;
-                left: 0;
-                height: 12%;
-                width: 100%;
-                color: whitesmoke;
-                font-size: 36px;
-                background-color: #403001;
-                padding-top: 2%;
-                padding-left: 2%;
-            }
-
-            .precio{
-                position: absolute;
-                top: 36%;
-                left: 0;
-                height: 16%;
-                width: 100%;
-                color: whitesmoke;
-                font-size: 36px;
-                background-color: #403001;
-                padding-top: 2%;
-                padding-left: 2%;
-            }
-
-            .contenido{
-                position: absolute;
-                top: 52%;
-                left: 0%;
-                height: auto;
-                width: 100%;
-                color: whitesmoke;
-                background-color: #403001;
-                padding-top: 2%;
-                padding-left: 2%;
-            }
-        </style>
+    <head th:replace="layout/plantilla :: head">
     </head>
     <body>
         <header th:replace="layout/plantilla :: header"/>
         <br>
         <br>
         <h2 class="titulo">Gelatina</h2>
-        <p class="descripcion">Sabores a elegir: Uva, Fresa, Tutifruti, Coco, Limón, Naranja</p>
-        <p class="precio"><i>₡1.000</i></p>
-        <section class="contenido">
-            <br>
+        <p class="descripcion_orden">Sabores a elegir: Uva, Fresa, Tutifruti, Coco, Limón, Naranja</p>
+        <p class="precio_orden"><i>₡1.000</i></p>
+        <section class="contenido_orden">
             <br>
             <img src="/images/gelatina.jpg" width="280" height="150"/>
             <br>
             <br>
-            <h3 style="font-size: 36px">Datos para la orden</h3>
+            <br>
+            <h3 style="font-size: 36px; color: whitesmoke">Datos para la orden</h3>
             <br>
             <br>
-            <form th:action="@{/orden/guardar}"
-                  method="POST"
-                  th:object=${factura} style="font-size: 30px">
-                <label for="nombre">Nombre: </label>
-                <input type="text" id="nombre" name="nombre" th:field="*{nombre}"/>
-                <br/>
-                <br/>
-                <label for="apellidos">Apellidos: </label>
-                <input type="text" id="apellidos" name="apellidos" th:field="*{apellidos}"/>
-                <br/>
-                <br/>
-                <label for="cedula">Cédula: </label>
-                <input type="number" id="cedula" name="cedula" th:field="*{cedula}"/>
-                <br/>
-                <br/>
-                <label for="telefono">Teléfono: </label>
-                <input type="text" id="telefono" name="telefono" placeholder="XXXX-XXXX" th:field="*{telefono}" />
-                <br/>
-                <br/>
-                <label for="direccion">Dirección: </label>
-                <textarea id="direccion"rows="5" cols="30" th:field="*{direccion}" />
-                <br/>
-                <br/>
-                <label for="titluarTarjeta">Titular de la tarjeta: </label>
-                <input type="text" id="titularTarjeta" name="titularTarjeta" th:field="*{titularTarjeta}" />
-                <br/>
-                <br/>
-                <label for="numTarjeta">Número de la tarjeta: </label>
-                <input type="number" id="numTarjeta" name="numTarjeta" th:field="*{numTarjeta}" />
-                <br/>
-                <br/>
-                <label for="fechaExpiracion">Fecha de expiración: </label>
-                <input type="text" id="fechaExpiracion" name="fechaExpiracion" placeholder="MM/AA" th:field="*{fechaExpiracion}" />
-                <br/>
-                <br/>
-                <label for="codDescuento">Código de descuento: </label>
-                <input type="text" id="fcodDescuento" name="codDescuento" th:field="*{codDescuento}" />
-                <br/>
-                <br/>
-                <label for="cvc">CVC: </label>
-                <input type="number" id="cvc" name="cvc" th:field="*{cvc}" />
-                <br/>
-                <br/>
-                <input type="submit" name="guardar" value="Guardar" />
+            <form th:action="@{/orden/guardar}" th:object="${factura}"
+                              method="POST" style="width: 25%" class="was-validated">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="nombre" placeholder="Nombre" required="true" th:field="*{cliente.nombre}">
+                    <label for="nombre">Nombre</label>
+                </div>
+                <br>
+                <br>
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="apellidos" placeholder="apellidos" required="true" th:field="*{cliente.apellidos}">
+                    <label for="apellidos">Apellidos</label>
+                </div>
+                <br>
+                <br>
+                <div class="form-floating">
+                    <input type="number" class="form-control" id="cedula" placeholder="Cédula" required="true" th:field="*{cliente.cedula}">
+                    <label for="cedula">Cédula</label>
+                </div>
+                <br>
+                <br>
+                <div class="form-floating">
+                    <input type="tel" class="form-control" id="telefono" placeholder="Telefono" required="true" th:field="*{cliente.telefono}">
+                    <label for="telefono">Telefono</label>
+                </div>
+                <br>
+                <br>
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Dirección" id="direccion" style="height: 100px" required="true" th:field="*{cliente.direccion}"></textarea>
+                    <label for="floatingTextarea">Dirección</label>
+                </div>
+                <br>
+                <br>
+                <label style="color:whitesmoke; font-size: 24px">Método de pago</label>
+                <br>
+                <br>
+                <div class="form-check form-check-inline" style="color:whitesmoke; font-size: 24px">
+                    <input class="form-check-input" type="radio" name="opcionEfectivo" id="opcionEfectivo" value="option1">
+                    <label class="form-check-label" for="opcionEfectivo">Efectivo</label>
+                </div>
+                <div class="form-check form-check-inline" style="color:whitesmoke; font-size: 24px">
+                    <input class="form-check-input" type="radio"  name="opcionTarjeta" id="opcionTarjeta" value="option2" 
+                           data-bs-toggle="collapse" data-bs-target="#datosTarjeta" aria-expanded="false" 
+                           aria-controls="datosTarjeta">
+                    </input>
+                    <label class="form-check-label" for="opcionTarjeta">Tarjeta</label>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="collapse" id="datosTarjeta">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="titularTarjeta" placeholder="Titular de la tarjeta" th:field="*{tarjeta.titularTarjeta}">
+                        <label for="titularTarjeta">Titular de la tarjeta</label>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="form-floating">
+                        <input type="number" class="form-control" id="numTarjeta" placeholder="Número de la tarjeta" th:field="*{tarjeta.numTarjeta}">
+                        <label for="numTarjeta">Número de la tarjeta</label>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="form-floating">
+                        <input type="month" class="form-control" id="fechaExpiracion" placeholder="Fecha de expiración" th:field="*{tarjeta.fechaExpiracion}">
+                        <label for="fechaExpiracion">Fecha de expiración</label>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="form-floating">
+                        <input type="number" class="form-control" id="cvc" placeholder="CVC" th:field="*{tarjeta.cvc}">
+                        <label for="cvc">CVC</label>
+                    </div>
+                    <br>
+                    <br>
+                </div>
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="codDescuento" placeholder="Código de Descuento" th:field="*{codDescuento}">
+                    <label for="codDescuento">Código de descuento</label>
+                </div>
+                <br>
+                <br>
+                <button type="submit" class="btn btn-primary">Comprar</button>
             </form>
         </section>
         <footer th:replace="layout/plantilla :: footer" />

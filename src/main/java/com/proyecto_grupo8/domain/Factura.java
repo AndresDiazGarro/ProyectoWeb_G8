@@ -14,48 +14,46 @@ public class Factura implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long numFactura; // llave primaria factura
-    private Long cedula; // llave primaria cliente
-    private Long idProducto; // llave primaria producto
-    private Long numTarjeta; // llave primaria tarjeta
+    String metodoPago;
     String codDescuento;
     int subtotal;
     int descuento;
     int total;
-    String nombre;
-    String apellidos;
-    String telefono;
-    String direccion;
-    String titulo;
-    String descripcion;
-    double precio;
-    String categoria;
-    String titularTarjeta;
-    String fechaExpiracion;
-    int cvc;
+    
+    @JoinColumn(name="cedula", referencedColumnName = "cedula")
+    @ManyToOne
+    private Cliente cliente;
+    
+    @JoinColumn(name="num_tarjeta", referencedColumnName = "num_tarjeta")
+    @ManyToOne
+    private Tarjeta tarjeta;
+    
+    @JoinColumn(name="id_producto", referencedColumnName = "id_producto")
+    @ManyToOne
+    private Producto producto;
 
     public Factura() {
     }
 
-    public Factura(Long cedula, Long idProducto, Long numTarjeta, String codDescuento, int subtotal, int descuento, int total, String nombre, String apellidos, String telefono, String direccion, String titulo, String descripcion, double precio, String categoria, String titularTarjeta, String fechaExpiracion, int cvc) {
-        this.cedula = cedula;
-        this.idProducto = idProducto;
-        this.numTarjeta = numTarjeta;
+    public Factura(String metodoPago, String codDescuento, int subtotal, int descuento, int total) {
+        this.metodoPago = metodoPago;
         this.codDescuento = codDescuento;
         this.subtotal = subtotal;
         this.descuento = descuento;
         this.total = total;
-        this.nombre = nombre;
-        this.apellidos = apellidos;
-        this.telefono = telefono;
-        this.direccion = direccion;
-        this.titulo = titulo;
-        this.descripcion = descripcion;
-        this.precio = precio;
-        this.categoria = categoria;
-        this.titularTarjeta = titularTarjeta;
-        this.fechaExpiracion = fechaExpiracion;
-        this.cvc = cvc;
     }
+
+    public Factura(String metodoPago, String codDescuento, int subtotal, int descuento, int total, Cliente cliente, Tarjeta tarjeta, Producto producto) {
+        this.metodoPago = metodoPago;
+        this.codDescuento = codDescuento;
+        this.subtotal = subtotal;
+        this.descuento = descuento;
+        this.total = total;
+        this.cliente = cliente;
+        this.tarjeta = tarjeta;
+        this.producto = producto;
+    }
+    
     
     
 }

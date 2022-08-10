@@ -6,32 +6,36 @@
         <header th:replace="layout/plantilla :: header"/>
         <h2 class="titulo">Ubicación</h2>
         <section class="contenido">
-        <br>
-        <br>
-        <br>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1964.984118854464!2d-84.0664230165779!3d9.936600745519636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e37dd45029e5%3A0xa9697f3a8578913a!2sWWPP%2BC6V%2C%20Barrio%20Escalante%2C%20San%20Jos%C3%A9%2C%2010101!5e0!3m2!1ses!2scr!4v1657260291217!5m2!1ses!2scr" 
-                width="600" height="450" style="border:2; border-color: black" allowfullscreen="" loading="lazy"  
-                referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-        <br><br><br><br><br>
-        <p style="font-size: 25px; color:whitesmoke">Ubicado en San José, Barrio Escalante. Avenida 9, Calle 31. Frente al restaurante "Saúl Bistro".</p>
-        <br>
-        <h2 style="font-size: 48px; color: whitesmoke">Horarios</h2>
-        <br>
-        <div class="cuad_horarios horarios">
-            <p>Lunes a Viernes</p>
-            <p><i>9AM-10PM</i></p>
-            <p><a style="font-size: 20px" th:href="@{/reservaciones}">Reservar</a></p>
-        </div>
-        <br><br><br>
-        <div class="cuad_horarios horarios">
-            <p>Sábados y Domingos</p>
-            <p><i>10AM-8PM</i></p>
-            <p><a style="font-size: 20px" th:href="@{/reservaciones}">Reservar</a></p>
-        </div>
-        <br><br><br><br><br>
+            <br>
+            <br>
+            <br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1964.984118854464!2d-84.0664230165779!3d9.936600745519636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e37dd45029e5%3A0xa9697f3a8578913a!2sWWPP%2BC6V%2C%20Barrio%20Escalante%2C%20San%20Jos%C3%A9%2C%2010101!5e0!3m2!1ses!2scr!4v1657260291217!5m2!1ses!2scr" 
+                    width="600" height="450" style="border:2; border-color: black" allowfullscreen="" loading="lazy"  
+                    referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <br><br><br><br><br>
+            <p style="font-size: 25px; color:whitesmoke">Ubicado en San José, Barrio Escalante. Avenida 9, Calle 31. Frente al restaurante "Saúl Bistro".</p>
+            <br>
+            <h2 style="font-size: 48px; color: whitesmoke">Horarios</h2>
+            <br>
+            <div class="card" style="width: 25%">
+                <div class="card-body" style="font-size: 24px">
+                    <p>Lunes a Viernes</p>
+                    <p><i>9AM-10PM</i></p>
+                    <p><a style="font-size: 20px" th:href="@{/reservaciones}">Reservar</a></p>
+                </div>
+            </div>
+            <br><br><br>
+            <div class="card" style="width: 25%">
+                <div class="card-body" style="font-size: 24px">
+                    <p>Sábados y Domingos</p>
+                    <p><i>10AM-8PM</i></p>
+                    <p><a style="font-size: 20px" th:href="@{/reservaciones}">Reservar</a></p>
+                    </div>
+            </div>
+            <br><br><br><br><br>
         </section>
-        
-       <footer th:replace="layout/plantilla :: footer" />
+
+        <footer th:replace="layout/plantilla :: footer" />
     </body>
 </html>

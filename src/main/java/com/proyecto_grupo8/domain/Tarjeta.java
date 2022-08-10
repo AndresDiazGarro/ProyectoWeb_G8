@@ -13,16 +13,17 @@ public class Tarjeta implements Serializable{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="num_tarjeta")
     private Long numTarjeta;
-    String titularTerjeta;
+    String titularTarjeta;
     String fechaExpiracion;
     int cvc;
 
     public Tarjeta() {
     }
 
-    public Tarjeta(String titularTerjeta, String fechaExpiracion, int cvc) {
-        this.titularTerjeta = titularTerjeta;
+    public Tarjeta(String titularTarjeta, String fechaExpiracion, int cvc) {
+        this.titularTarjeta = titularTarjeta;
         this.fechaExpiracion = fechaExpiracion;
         this.cvc = cvc;
     }

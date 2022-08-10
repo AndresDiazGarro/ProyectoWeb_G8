@@ -93,7 +93,9 @@ public class ExpressController {
     }
 
     @PostMapping("orden/guardar")
-    public String guardarOrden(Factura factura) {
+    public String guardarOrden(Factura factura, Cliente cliente, Tarjeta tarjeta) {
+        clienteService.save(cliente);
+        tarjetaService.save(tarjeta);
         facturaService.save(factura);
         return "/express/factura_orden";
     }
