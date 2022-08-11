@@ -20,6 +20,7 @@
     width: 15%;
     background-color: #A68B03;
     color: whitesmoke;
+    padding: 2% 1% 2% 1%;
 }
 
 #contenido {
@@ -31,6 +32,7 @@
     background-color: #403001;
     color: whitesmoke;
     overflow: visible;
+    padding: 2%;
 }
 
 #contenidoCompleto {
