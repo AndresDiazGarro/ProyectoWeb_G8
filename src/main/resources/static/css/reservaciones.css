@@ -15,7 +15,7 @@
     position: absolute;
     top: 34%;
     left: 0;
-    height: 80%;
+    height: 120%;
     width: 100%;
     background-color: #403001;
 }
@@ -82,7 +82,7 @@
 
 .infoReservacion{
     position: absolute;
-    top: 100%;
+    top: 120%;
     left: 0;
     height: auto;
     width: 100%;

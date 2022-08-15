@@ -1,8 +1,9 @@
 <html>
     <head th:replace="layout/plantilla :: head">
+        <title>Restaurante La Hoja de Palma</title>
     </head>
     <body>
-        <header th:replace="layout/plantilla :: header"/>
+       <header th:replace="layout/plantilla :: header"/>
         <br>
         <br>
         <h2 class="titulo">Casado</h2>
@@ -17,34 +18,34 @@
             <h3 style="font-size: 36px; color: whitesmoke">Datos para la orden</h3>
             <br>
             <br>
-            <form th:action="@{/orden/guardar}" th:object="${factura}"
-                              method="POST" style="width: 25%" class="was-validated">
+            <form th:action="@{/orden/guardar}" th:object="${orden}"
+                  method="POST" style="width: 25%" class="was-validated">
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="nombre" placeholder="Nombre" required="true" th:field="*{cliente.nombre}">
+                    <input type="text" class="form-control" id="nombre" placeholder="Nombre" required="true" th:field="*{nombre}">
                     <label for="nombre">Nombre</label>
                 </div>
                 <br>
                 <br>
                 <div class="form-floating">
-                    <input type="text" class="form-control" id="apellidos" placeholder="apellidos" required="true" th:field="*{cliente.apellidos}">
+                    <input type="text" class="form-control" id="apellidos" placeholder="apellidos" required="true" th:field="*{apellidos}">
                     <label for="apellidos">Apellidos</label>
                 </div>
                 <br>
                 <br>
                 <div class="form-floating">
-                    <input type="number" class="form-control" id="cedula" placeholder="Cédula" required="true" th:field="*{cliente.cedula}">
+                    <input type="number" class="form-control" id="cedula" placeholder="Cédula" required="true" th:field="*{cedula}">
                     <label for="cedula">Cédula</label>
                 </div>
                 <br>
                 <br>
                 <div class="form-floating">
-                    <input type="tel" class="form-control" id="telefono" placeholder="Telefono" required="true" th:field="*{cliente.telefono}">
+                    <input type="tel" class="form-control" id="telefono" placeholder="Telefono" required="true" th:field="*{telefono}">
                     <label for="telefono">Telefono</label>
                 </div>
                 <br>
                 <br>
                 <div class="form-floating">
-                    <textarea class="form-control" placeholder="Dirección" id="direccion" style="height: 100px" required="true" th:field="*{cliente.direccion}"></textarea>
+                    <textarea class="form-control" placeholder="Dirección" id="direccion" style="height: 100px" required="true" th:field="*{direccion}"></textarea>
                     <label for="floatingTextarea">Dirección</label>
                 </div>
                 <br>
@@ -68,25 +69,25 @@
                 <br>
                 <div class="collapse" id="datosTarjeta">
                     <div class="form-floating">
-                        <input type="text" class="form-control" id="titularTarjeta" placeholder="Titular de la tarjeta" th:field="*{tarjeta.titularTarjeta}">
+                        <input type="text" class="form-control" id="titularTarjeta" placeholder="Titular de la tarjeta" th:field="*{titularTarjeta}">
                         <label for="titularTarjeta">Titular de la tarjeta</label>
                     </div>
                     <br>
                     <br>
                     <div class="form-floating">
-                        <input type="number" class="form-control" id="numTarjeta" placeholder="Número de la tarjeta" th:field="*{tarjeta.numTarjeta}">
+                        <input type="number" class="form-control" id="numTarjeta" placeholder="Número de la tarjeta" th:field="*{numTarjeta}">
                         <label for="numTarjeta">Número de la tarjeta</label>
                     </div>
                     <br>
                     <br>
                     <div class="form-floating">
-                        <input type="month" class="form-control" id="fechaExpiracion" placeholder="Fecha de expiración" th:field="*{tarjeta.fechaExpiracion}">
+                        <input type="month" class="form-control" id="fechaExpiracion" placeholder="Fecha de expiración" th:field="*{fechaExpiracion}">
                         <label for="fechaExpiracion">Fecha de expiración</label>
                     </div>
                     <br>
                     <br>
                     <div class="form-floating">
-                        <input type="number" class="form-control" id="cvc" placeholder="CVC" th:field="*{tarjeta.cvc}">
+                        <input type="number" class="form-control" id="cvc" placeholder="CVC" th:field="*{cvc}">
                         <label for="cvc">CVC</label>
                     </div>
                     <br>

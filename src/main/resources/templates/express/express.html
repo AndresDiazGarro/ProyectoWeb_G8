@@ -3,7 +3,7 @@
         <title>Restaurante La Hoja de Palma</title>
     </head>
     <body>
-       <header th:replace="layout/plantilla :: header"/>
+   <header th:replace="layout/plantilla :: header"/>
         <br>
         <br>
         <h2 class="titulo">Express</h2>
@@ -18,13 +18,15 @@
                 <br>
                 <p><i>₡3.500</i></p>
                 <br>
+                <br>
                 <a class="btn btn-warning" th:href="@{/orden/casado}" role="button">Ordenar</a>
             </div>
             <div id="imag_platillo1">
                 <img src="/images/casado.jpg" width="235" height="175"/>
             </div>
             <div id="platillo2" style="padding-left: 1%;">
-                <p style="font-size: 20px"><strong>Spaghetti con <br> Albóndigas</strong></p>
+                <p style="font-size: 20px"><strong>Spaghetti con</strong></p>
+                <p style="font-size: 20px"><strong>Albóndigas</strong></p>
                 <br>
                 <p>Fideos con Salsa...</p>
                 <br>
@@ -36,7 +38,8 @@
                 <img src="/images/spaghetti.jpg" width="235" height="175"/>
             </div>
             <div id="platillo3" style="padding-left: 1%;">
-                <p style="font-size: 20px"><strong>Pescado <br> Entero</strong></p>
+                <p style="font-size: 20px"><strong>Pescado</strong></p>
+                <p style="font-size: 20px"><strong>Entero</strong></p>
                 <br>
                 <p>Pargo Rojo Frito...</p>
                 <br>
@@ -57,13 +60,15 @@
                 <br>
                 <p><i>₡1.500</i></p>
                 <br>
+                <br>
                 <a class="btn btn-warning" th:href="@{/orden/chicharrones}" role="button">Ordenar</a>
             </div>
             <div id="imag_acompañamiento1">
                 <img src="/images/chicharrones.jpg" width="235" height="175"/>
             </div>
             <div id="acompañamiento2" style="padding-left: 1%;">
-                <p style="font-size: 20px"><strong>Frijoles <br> Molidos</strong></p>
+                <p style="font-size: 20px"><strong>Frijoles</strong></p>
+                <p style="font-size: 20px"><strong>Molidos</strong></p>
                 <br>
                 <p>Frijoles Molidos con...</p>
                 <br>
@@ -81,6 +86,7 @@
                 <br>
                 <p><i>₡1.300</i></p>
                 <br>
+                <br>
                 <a class="btn btn-warning" th:href="@{/orden/nachos}" role="button">Ordenar</a>
             </div>
             <div id="imag_acompañamiento3">
@@ -96,13 +102,15 @@
                 <br>
                 <p><i>₡1.500</i></p>
                 <br>
+                <br>
                 <a class="btn btn-warning" th:href="@{/orden/tres_leches}" role="button">Ordenar</a>
             </div>
             <div id="imag_acompañamiento1">
                 <img src="/images/tres leches.jpg" width="235" height="175"/>
             </div>
             <div id="postre2" style="padding-left: 1%;">
-                <p style="font-size: 20px"><strong>Cono de <br> Helado</strong></p>
+                <p style="font-size: 20px"><strong>Cono de</strong></p>
+                <p style="font-size: 20px"><strong>Helado</strong></p>
                 <br>
                 <p>Sabores a elegir:...</p>
                 <br>
@@ -116,9 +124,10 @@
             <div id="postre3" style="padding-left: 1%; padding-top: 1%">
                 <p style="font-size: 24px"><strong>Gelatina</strong></p>
                 <br>
-                <p>Sabores a elegir:....</p>
+                <p>Sabores a elegir:...</p>
                 <br>
                 <p><i>₡1.000</i></p>
+                <br>
                 <br>
                 <a class="btn btn-warning" th:href="@{/orden/gelatina}" role="button">Ordenar</a>
             </div>

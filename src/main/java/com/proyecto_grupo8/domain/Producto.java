@@ -17,13 +17,13 @@ public class Producto implements Serializable{
     private Long idProducto;
     String titulo;
     String descripcion;
-    double precio;
+    int precio;
     String categoria;
 
     public Producto() {
     }
 
-    public Producto(Long idProducto, String titulo, String descripcion, double precio, String categoria) {
+    public Producto(Long idProducto, String titulo, String descripcion, int precio, String categoria) {
         this.idProducto = idProducto;
         this.titulo = titulo;
         this.descripcion = descripcion;

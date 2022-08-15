@@ -28,7 +28,7 @@
     position: absolute;
     top: 36%;
     left: 0;
-    height: 40%;
+    height: 55%;
     width: 100%;
     background-color: #403001;
 }
@@ -80,7 +80,7 @@
 
  .acompañamientos{
     position: absolute;
-    top: 76%;
+    top: 91%;
     left: 0;
     height: 12%;
     width: 100%;
@@ -93,9 +93,9 @@
 
 #producto2{
     position: absolute;
-    top: 88%;
+    top: 103%;
     left: 0;
-    height: 40%;
+    height: 55%;
     width: 100%;
     background-color: #403001;
 }
@@ -147,7 +147,7 @@
 
  .postres{
     position: absolute;
-    top: 128%;
+    top: 158%;
     left: 0;
     height: 12%;
     width: 100%;
@@ -160,9 +160,9 @@
 
 #producto3{
     position: absolute;
-    top: 140%;
+    top: 170%;
     left: 0;
-    height: 40%;
+    height: 55%;
     width: 100%;
     background-color: #403001;
 }
