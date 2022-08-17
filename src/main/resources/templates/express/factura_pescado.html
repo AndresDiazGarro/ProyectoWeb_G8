@@ -1,0 +1,45 @@
+<html>
+    <head th:replace="layout/plantilla :: head">
+        <title>Restaurante La Hoja de Palma</title>
+    </head>
+    <body>
+        <header th:replace="layout/plantilla :: header"/>
+        <br>
+        <br>
+        <h2 class="titulo">Factura</h2>
+        <p class="descripcion_factura"> Datos de la factura</p>
+        <section class="contenido_factura">
+            <div th:each="orden, iterStat : ${ordenes}" th:if="${iterStat.index >= iterStat.size-1}">
+                <p> Orden a nombre de: [[${orden.nombre} + ' ' + ${orden.apellidos}]] </p>
+                <br>
+                <p> Teléfono: [[${orden.telefono}]]</p>
+                <br>
+                <p> Dirección: [[${orden.direccion}]] </p>
+                <br>
+                <p><strong> Producto ordenado: </strong></p>
+                <br>
+                <p> Pescado Entero </p>
+                <br>
+                <img src="/images/pescado.jpg" width="280" height="150"/>
+                <br>
+                <br>
+                <br>
+                <p> Subtotal : [[${Subtotal} + '₡']] </p>
+                <p> Descuento : [[${Descuento} + '₡']] </p>
+                <p> Total : [[${Total} + '₡']] </p>
+                <br>
+                <br>
+                <p> Método de Pago: [[${metodoPago}]] </p>
+                <br>
+                <br>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <a class="btn btn-success" role="button" th:href="@{/express/modificar_orden_pescado/}+${orden.numOrden}">Actualizar Orden</button>
+                    <a class="btn btn-danger" role="button" th:href="@{/express/eliminar_orden/}+${orden.numOrden}">Borrar Orden</button>
+                    <a class="btn btn-primary" role="button" th:href="@{/express}">Regresar</button>
+                </div>
+                <br>
+                <br>
+            </div>
+        </section>
+    </body>
+</html>
