@@ -437,7 +437,7 @@ public class ExpressController {
     @GetMapping("/express/eliminar_orden/{numOrden}")
     public String eliminarOrden(Orden orden) {
         ordenService.delete(orden);
-        return "redirect:/express/express";
+        return "redirect:/express";
     }
 
 }
