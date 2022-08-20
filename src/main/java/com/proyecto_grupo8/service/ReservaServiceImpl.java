@@ -22,7 +22,7 @@ public class ReservaServiceImpl implements ReservaService{
     @Override
     @Transactional(readOnly = true)
     public Reserva getReserva(Reserva reserva) {
-        return reservaDao.findById(reserva.getNumReserva()).orElse(null);
+        return reservaDao.findById(reserva.getNum_reserva()).orElse(null);
     }
 
     @Override

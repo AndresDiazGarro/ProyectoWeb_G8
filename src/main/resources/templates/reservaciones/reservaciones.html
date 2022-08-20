@@ -17,13 +17,13 @@
                 <br>
                 <p style="text-align: justify">Perfecta para una cita romántica con ese alguien especial y pasar un buen rato disfrutando la excelente comida.</p>
                 <br>
-               <div class="form-check form-switch form-check-inline" style="color:whitesmoke; font-size: 18px; color: whitesmoke">
+                <div class="form-check form-switch form-check-inline" style="color:whitesmoke; font-size: 18px; color: whitesmoke">
                     <input class="form-check-input" type="radio" name="opcion" role="switch" id="opcion1" value="option1"
                            data-bs-toggle="collapse" data-bs-target="#selec1" aria-expanded="false" 
                            aria-controls="opcion1">
                     <label class="form-check-label" for="opcion1">Reservar</label>
                 </div>
-                
+
             </div>
             <div id="imag_mesa1">
                 <img src="/images/mesa1.jpg" width="355" height="250"/>
@@ -51,7 +51,7 @@
                 <br>
                 <p style="text-align: justify">¿Un almuerzo importante con un ejecutivo? No te preocupes, tenemos la mesa indicada para cerrar ese trato tan importante.</p>
                 <br>
-               <div class="form-check form-check-inline form-switch" style="color:whitesmoke; font-size: 18px; color: whitesmoke">
+                <div class="form-check form-check-inline form-switch" style="color:whitesmoke; font-size: 18px; color: whitesmoke">
                     <input class="form-check-input" type="radio" name="opcion" role="switch" id="opcion3" value="option3"
                            data-bs-toggle="collapse" data-bs-target="#selec3" aria-expanded="false" 
                            aria-controls="opcion3">
@@ -83,281 +83,250 @@
         </div>
 
         <br>
-                <br>
-                <br>
-                <div class="collapse" id="selec1">
-                    
-                    <section class="infoReservacion" style="padding-left: 4%"> 
+        <br>
+        <br>
+        <div class="collapse" id="selec1">
 
-            <p style="font-size: 38px">Información de la Reserva</p>
+            <section class="infoReservacion" style="padding-left: 4%" required="true"> 
 
-            <br>
-            <br>
+                <p style="font-size: 38px">Información de la Reserva</p>
 
-            <form method="POST" style="width: 25%; color: silver"> 
+                <br>
+                <br>
 
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="nombre" placeholder="Nombre" required="true">
-                    <label for="nombre">Nombre</label>
-                </div>
-                <br>
-                <br>
-                <div class="form-floating">
-                    <input type="text" class="form-control" id="apellidos" placeholder="apellidos" required="true">
-                    <label for="apellidos">Apellidos</label>
-                </div>
-                <br>
-                <br>
-                <div class="form-floating">
-                    <input type="number" class="form-control" id="cedula" placeholder="Cédula" required="true">
-                    <label for="cedula">Cédula</label>
-                </div>
-                <br>
-                <br>
-                <div class="form-floating">
-                    <input type="tel" class="form-control" id="telefono" placeholder="Telefono" required="true" >
-                    <label for="telefono">Telefono</label>
-                </div>
-                <br>
-                <br>
-                <div class="form-floating">
-                    <input type="number" class="form-control" id="cantidad" placeholder="Cantidad" required="true">
-                    <label for="cedula">Cantidad de Personas</label>
-                </div>
-                <br>
-                <br>
-                <div class="form-floating">
-                    <input type="date" class="form-control" id="fecha" placeholder="Fecha" required="true">
-                    <label for="fecha">Fecha a Reservar</label>
-                </div>
-                <br>
-                <br>
-                <div class="form-floating">
-                    <input type="time" class="form-control" id="hora" placeholder="Hora" required="true">
-                    <label for="hora">Hora a Reservar</label>
-                </div>
-                <br>
-                <br>
-                <input type="checkbox" name="check" id="tyc" required="true">
-                <label for="checkbox1">Acepto los términos y condiciones</label>
-                <br>
-                <br>
-                <a class="btn btn-warning" th:href="@{/orden/gelatina}" role="button">Reservar</a>
-                <br><br>
-                <br>
-                <br>
-                    
-                </div>
-        
-        
+                <form th:action="@{/mesaRomantica}" th:object="${reserva}"
+                      method = "POST" style="width: 25%; color: silver" class="was-validated" modelAttribute="reserva"> 
 
-            </form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="nombre" placeholder="Nombre" required="true" th:field="*{nombre}">
+                        <label for="nombre">Nombre</label>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="apellidos" placeholder="Apellidos" required="true" th:field="*{apellidos}">
+                        <label for="apellidos">Apellidos</label>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="number" class="form-control" id="cedula" placeholder="Cédula" required="true" th:field="*{cedula}">
+                        <label for="cedula">Cédula</label>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="tel" class="form-control" id="telefono" placeholder="Telefono" required="true" th:field="*{telefono}">
+                        <label for="telefono">Telefono</label>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="number" class="form-control" id="cantidad" placeholder="Cantidad de Personas" required="true" th:field="*{cant_personas}">
+                        <label for="cant_personas">Cantidad de Personas</label>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="date" class="form-control" id="fecha" placeholder="Fecha a Reservar" required="true" th:field="*{dia_reserva}">
+                        <label for="fecha">Fecha a Reservar</label>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="time" class="form-control" id="hora" placeholder="Hora a Reservar" required="true" th:field="*{hora_reserva}">
+                        <label for="hora">Hora a Reservar</label>
+                    </div>
+                    <br>
+                    <input type="checkbox" name="check" id="tyc" required="true">
+                    <label for="checkbox1">Acepto los términos y condiciones</label>
+                    <br>
+                    <button type="submit" class="btn btn-warning" role="button">Reservar</button>
+                    <br><br>
+                    <br><br><br>
+                    <br>
+                </form>
+        </div>
 
 
-            
-            <div class="collapse" id="selec2">
-                    
-                    <section class="infoReservacion" style="padding-left: 4%"> 
-
-            <p style="font-size: 38px">Información de la Reserva</p>
-
-            <br>
-            <br>
-
-            <form method="POST" style="width: 25%; color: silver"> 
-
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="nombre" placeholder="Nombre" required="true">
-                    <label for="nombre">Nombre</label>
-                </div>
-                <br>
-                <br>
-                <div class="form-floating">
-                    <input type="text" class="form-control" id="apellidos" placeholder="apellidos" required="true">
-                    <label for="apellidos">Apellidos</label>
-                </div>
-                <br>
-                <br>
-                <div class="form-floating">
-                    <input type="number" class="form-control" id="cedula" placeholder="Cédula" required="true">
-                    <label for="cedula">Cédula</label>
-                </div>
-                <br>
-                <br>
-                <div class="form-floating">
-                    <input type="tel" class="form-control" id="telefono" placeholder="Telefono" required="true" >
-                    <label for="telefono">Telefono</label>
-                </div>
-                <br>
-                <br>
-                <div class="form-floating">
-                    <input type="number" class="form-control" id="cantidad" placeholder="Cantidad" required="true">
-                    <label for="cedula">Cantidad de Personas</label>
-                </div>
-                <br>
-                <br>
-                <div class="form-floating">
-                    <input type="date" class="form-control" id="fecha" placeholder="Fecha" required="true">
-                    <label for="fecha">Fecha a Reservar</label>
-                </div>
-                <br>
-                <br>
-                <div class="form-floating">
-                    <input type="time" class="form-control" id="hora" placeholder="Hora" required="true">
-                    <label for="hora">Hora a Reservar</label>
-                </div>
-                <br>
-                <br>
-                <input type="checkbox" name="check" id="tyc" required="true">
-                <label for="checkbox1">Acepto los términos y condiciones</label>
-                <br>
-                <br>
-                <a class="btn btn-warning" th:href="@{/orden/casado}" role="button">Reservar</a>
-                <br><br>
-                <br>
-                <br>
-                    
-                </div>
-        
-        
-
-            </form>
-            
-            <div class="collapse" id="selec3">
-                    
-                    <section class="infoReservacion" style="padding-left: 4%"> 
-
-            <p style="font-size: 38px">Información de la Reserva</p>
-
-            <br>
-            <br>
-
-            <form method="POST" style="width: 25%; color: silver"> 
-
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="nombre" placeholder="Nombre" required="true">
-                    <label for="nombre">Nombre</label>
-                </div>
-                <br>
-                <br>
-                <div class="form-floating">
-                    <input type="text" class="form-control" id="apellidos" placeholder="apellidos" required="true">
-                    <label for="apellidos">Apellidos</label>
-                </div>
-                <br>
-                <br>
-                <div class="form-floating">
-                    <input type="number" class="form-control" id="cedula" placeholder="Cédula" required="true">
-                    <label for="cedula">Cédula</label>
-                </div>
-                <br>
-                <br>
-                <div class="form-floating">
-                    <input type="tel" class="form-control" id="telefono" placeholder="Telefono" required="true" >
-                    <label for="telefono">Telefono</label>
-                </div>
-                <br>
-                <br>
-                <div class="form-floating">
-                    <input type="number" class="form-control" id="cantidad" placeholder="Cantidad" required="true">
-                    <label for="cedula">Cantidad de Personas</label>
-                </div>
-                <br>
-                <br>
-                <div class="form-floating">
-                    <input type="date" class="form-control" id="fecha" placeholder="Fecha" required="true">
-                    <label for="fecha">Fecha a Reservar</label>
-                </div>
-                <br>
-                <br>
-                <div class="form-floating">
-                    <input type="time" class="form-control" id="hora" placeholder="Hora" required="true">
-                    <label for="hora">Hora a Reservar</label>
-                </div>
-                <br>
-                <br>
-                <input type="checkbox" name="check" id="tyc" required="true">
-                <label for="checkbox1">Acepto los términos y condiciones</label>
-                <br>
-                <br>
-                <a class="btn btn-warning" th:href="@{/orden/nachos}" role="button">Reservar</a>
-                <br><br>
-                <br>
-                <br>
-                    
-                </div>
-        
-            </form>
 
 
-            <div class="collapse" id="selec4">
-                    
-                    <section class="infoReservacion" style="padding-left: 4%"> 
 
-            <p style="font-size: 38px">Información de la Reserva</p>
+        <div class="collapse" id="selec2">
 
-            <br>
-            <br>
+            <section class="infoReservacion" style="padding-left: 4%"> 
 
-            <form method="POST" style="width: 25%; color: silver"> 
+                <p style="font-size: 38px">Información de la Reserva</p>
 
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="nombre" placeholder="Nombre" required="true">
-                    <label for="nombre">Nombre</label>
-                </div>
                 <br>
                 <br>
-                <div class="form-floating">
-                    <input type="text" class="form-control" id="apellidos" placeholder="apellidos" required="true">
-                    <label for="apellidos">Apellidos</label>
-                </div>
-                <br>
-                <br>
-                <div class="form-floating">
-                    <input type="number" class="form-control" id="cedula" placeholder="Cédula" required="true">
-                    <label for="cedula">Cédula</label>
-                </div>
-                <br>
-                <br>
-                <div class="form-floating">
-                    <input type="tel" class="form-control" id="telefono" placeholder="Telefono" required="true" >
-                    <label for="telefono">Telefono</label>
-                </div>
-                <br>
-                <br>
-                <div class="form-floating">
-                    <input type="number" class="form-control" id="cantidad" placeholder="Cantidad" required="true">
-                    <label for="cedula">Cantidad de Personas</label>
-                </div>
-                <br>
-                <br>
-                <div class="form-floating">
-                    <input type="date" class="form-control" id="fecha" placeholder="Fecha" required="true">
-                    <label for="fecha">Fecha a Reservar</label>
-                </div>
-                <br>
-                <br>
-                <div class="form-floating">
-                    <input type="time" class="form-control" id="hora" placeholder="Hora" required="true">
-                    <label for="hora">Hora a Reservar</label>
-                </div>
-                <br>
-                <br>
-                <input type="checkbox" name="check" id="tyc" required="true">
-                <label for="checkbox1">Acepto los términos y condiciones</label>
-                <br>
-                <br>
-                <a class="btn btn-warning" th:href="@{/orden/cono}" role="button">Reservar</a>
-                <br><br>
-                <br>
-                <br>
-                    
-                </div>
-        
-            </form>
-            
-        </section>
 
-        <footer th:replace="layout/plantilla :: footer" />
-    </body>
+                <form th:action="@{/mesaSencilla}" th:object="${reserva}"
+                      method = "POST" style="width: 25%; color: silver" class="was-validated" modelAttribute="reserva"> 
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="nombre" placeholder="Nombre" required="true" th:field="*{nombre}">
+                        <label for="nombre">Nombre</label>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="apellidos" placeholder="Apellidos" required="true" th:field="*{apellidos}">
+                        <label for="apellidos">Apellidos</label>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="number" class="form-control" id="cedula" placeholder="Cédula" required="true" th:field="*{cedula}">
+                        <label for="cedula">Cédula</label>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="tel" class="form-control" id="telefono" placeholder="Telefono" required="true" th:field="*{telefono}">
+                        <label for="telefono">Telefono</label>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="number" class="form-control" id="cantidad" placeholder="Cantidad de Personas" required="true" th:field="*{cant_personas}">
+                        <label for="cant_personas">Cantidad de Personas</label>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="date" class="form-control" id="fecha" placeholder="Fecha a Reservar" required="true" th:field="*{dia_reserva}">
+                        <label for="fecha">Fecha a Reservar</label>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="time" class="form-control" id="hora" placeholder="Hora a Reservar" required="true" th:field="*{hora_reserva}">
+                        <label for="hora">Hora a Reservar</label>
+                    </div>
+                    <br>
+                    <input type="checkbox" name="check" id="tyc" required="true">
+                    <label for="checkbox1">Acepto los términos y condiciones</label>
+                    <br>
+                    <button type="submit" class="btn btn-warning" role="button">Reservar</button>
+                    <br><br>
+                    <br><br><br>
+                    <br>
+                </form>
+        </div>
+
+
+
+
+
+        <div class="collapse" id="selec3">
+
+            <section class="infoReservacion" style="padding-left: 4%"> 
+
+                <p style="font-size: 38px">Información de la Reserva</p>
+
+                <br>
+                <br>
+
+                <form th:action="@{/mesaEjecutiva}" th:object="${reserva}"
+                      method = "POST" style="width: 25%; color: silver" class="was-validated" modelAttribute="reserva"> 
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="nombre" placeholder="Nombre" required="true" th:field="*{nombre}">
+                        <label for="nombre">Nombre</label>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="apellidos" placeholder="Apellidos" required="true" th:field="*{apellidos}">
+                        <label for="apellidos">Apellidos</label>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="number" class="form-control" id="cedula" placeholder="Cédula" required="true" th:field="*{cedula}">
+                        <label for="cedula">Cédula</label>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="tel" class="form-control" id="telefono" placeholder="Telefono" required="true" th:field="*{telefono}">
+                        <label for="telefono">Telefono</label>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="number" class="form-control" id="cantidad" placeholder="Cantidad de Personas" required="true" th:field="*{cant_personas}">
+                        <label for="cant_personas">Cantidad de Personas</label>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="date" class="form-control" id="fecha" placeholder="Fecha a Reservar" required="true" th:field="*{dia_reserva}">
+                        <label for="fecha">Fecha a Reservar</label>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="time" class="form-control" id="hora" placeholder="Hora a Reservar" required="true" th:field="*{hora_reserva}">
+                        <label for="hora">Hora a Reservar</label>
+                    </div>
+                    <br>
+                    <input type="checkbox" name="check" id="tyc" required="true">
+                    <label for="checkbox1">Acepto los términos y condiciones</label>
+                    <br>
+                    <button type="submit" class="btn btn-warning" role="button">Reservar</button>
+                    <br><br>
+                    <br><br><br>
+                    <br>
+                </form>
+        </div>
+
+
+
+        <div class="collapse" id="selec4">
+
+            <section class="infoReservacion" style="padding-left: 4%"> 
+
+                <p style="font-size: 38px">Información de la Reserva</p>
+
+                <br>
+                <br>
+
+                <form th:action="@{/mesaVIP}" th:object="${reserva}"
+                      method = "POST" style="width: 25%; color: silver" class="was-validated" modelAttribute="reserva"> 
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="nombre" placeholder="Nombre" required="true" th:field="*{nombre}">
+                        <label for="nombre">Nombre</label>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="apellidos" placeholder="Apellidos" required="true" th:field="*{apellidos}">
+                        <label for="apellidos">Apellidos</label>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="number" class="form-control" id="cedula" placeholder="Cédula" required="true" th:field="*{cedula}">
+                        <label for="cedula">Cédula</label>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="tel" class="form-control" id="telefono" placeholder="Telefono" required="true" th:field="*{telefono}">
+                        <label for="telefono">Telefono</label>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="number" class="form-control" id="cantidad" placeholder="Cantidad de Personas" required="true" th:field="*{cant_personas}">
+                        <label for="cant_personas">Cantidad de Personas</label>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="date" class="form-control" id="fecha" placeholder="Fecha a Reservar" required="true" th:field="*{dia_reserva}">
+                        <label for="fecha">Fecha a Reservar</label>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="time" class="form-control" id="hora" placeholder="Hora a Reservar" required="true" th:field="*{hora_reserva}">
+                        <label for="hora">Hora a Reservar</label>
+                    </div>
+                    <br>
+                    <input type="checkbox" name="check" id="tyc" required="true">
+                    <label for="checkbox1">Acepto los términos y condiciones</label>
+                    <br>
+                    <button type="submit" class="btn btn-warning" role="button">Reservar</button>
+                    <br><br>
+                    <br><br><br>
+                    <br>
+                </form>
+        </div>
+
+
+
+    </section>
+
+    <footer th:replace="layout/plantilla :: footer" />
+</body>
 </html>

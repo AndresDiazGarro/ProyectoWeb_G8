@@ -22,47 +22,47 @@ public class ExpressController {
         return "/express/express";
     }
 
-    @GetMapping("/orden/casado")
+    @GetMapping("/casado")
     public String nuevaOrden_Casado(Orden orden) {
         return "/express/orden_casado";
     }
 
-    @GetMapping("/orden/spaghetti")
+    @GetMapping("/spaghetti")
     public String nuevaOrden_Spaghetti(Orden orden) {
         return "/express/orden_spaghetti";
     }
 
-    @GetMapping("/orden/pescado")
+    @GetMapping("/pescado")
     public String nuevaOrden_Pescado(Orden orden) {
         return "/express/orden_pescado";
     }
 
-    @GetMapping("/orden/chicharrones")
+    @GetMapping("/chicharrones")
     public String nuevaOrden_Chicharrones(Orden orden) {
         return "/express/orden_chicharrones";
     }
 
-    @GetMapping("/orden/frijoles")
+    @GetMapping("/frijoles")
     public String nuevaOrden_Frijoles(Orden orden) {
         return "/express/orden_frijoles";
     }
 
-    @GetMapping("/orden/nachos")
+    @GetMapping("/nachos")
     public String nuevaOrden_Nachos(Orden orden) {
         return "/express/orden_nachos";
     }
 
-    @GetMapping("/orden/tres_leches")
+    @GetMapping("/tres_leches")
     public String nuevaOrden_Tres_Leches(Orden orden) {
         return "/express/orden_tres_leches";
     }
 
-    @GetMapping("/orden/cono")
+    @GetMapping("/cono")
     public String nuevaOrden_Cono(Orden orden) {
         return "/express/orden_cono";
     }
 
-    @GetMapping("/orden/gelatina")
+    @GetMapping("/gelatina")
     public String nuevaOrden_Gelatina(Orden orden) {
         return "/express/orden_gelatina";
     }

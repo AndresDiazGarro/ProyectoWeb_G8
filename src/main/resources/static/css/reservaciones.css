@@ -2,7 +2,7 @@
     position: absolute;
     top: 12%;
     left: 0;
-    height: 12%;
+    height: 5%;
     width: 100%;
     color: whitesmoke;
     font-size: 48px;
@@ -98,4 +98,24 @@
     left: 0%;
     height: 12%;
     width: 100%;
+}
+
+#reserva{
+    color: whitesmoke;
+    position: absolute;
+    background-color: #403001;
+    top: 23%;
+    height: 124%;
+    width: 100%;
+    left: 0%;
+}
+
+#reserva2{
+    color: whitesmoke;
+    font-size: 20px;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    height: 70%;
+    width: 95%;
 }
