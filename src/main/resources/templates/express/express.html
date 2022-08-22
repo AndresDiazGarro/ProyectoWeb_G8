@@ -6,130 +6,131 @@
    <header th:replace="layout/plantilla :: header"/>
         <br>
         <br>
-        <h2 class="titulo">Express</h2>
+        <h2 class="titulo">Express  <a th:href="@{/(lang=es)}">ES</a> | 
+                        <a th:href="@{/(lang=en)}">EN</a></h2>
         <br>
         <br>
-        <p class="platillos_principales">Platillos principales</p>
+        <p class="platillos_principales" th:text="#{menu.titulo}">Platillos principales</p>
         <div id="producto">
             <div id="platillo1" style="padding-left: 1%; padding-top: 1%">
-                <p style="font-size: 24px"><strong>Casado</strong></p>
+                <p style="font-size: 24px"><strong th:text="#{menu.titulo}">Casado</strong></p>
                 <br>
-                <p>Arroz, Frijoles y...</p>
+                <p th:text="#{menu.titulo}">Arroz, Frijoles y...</p>
                 <br>
                 <p><i>₡3.500</i></p>
                 <br>
                 <br>
-                <a class="btn btn-warning" th:href="@{/casado}" role="button">Ordenar</a>
+                <a class="btn btn-warning" th:href="@{/casado}" role="button" th:text="#{menu.titulo}">Ordenar</a>
             </div>
             <div id="imag_platillo1">
                 <img src="/images/casado.jpg" width="235" height="175"/>
             </div>
             <div id="platillo2" style="padding-left: 1%;">
-                <p style="font-size: 20px"><strong>Spaghetti con</strong></p>
-                <p style="font-size: 20px"><strong>Albóndigas</strong></p>
+                <p style="font-size: 20px"><strong th:text="#{menu.titulo}">Spaghetti con</strong></p>
+                <p style="font-size: 20px"><strong th:text="#{menu.titulo}">Albóndigas</strong></p>
                 <br>
-                <p>Fideos con Salsa...</p>
+                <p th:text="#{menu.titulo}">Fideos con Salsa...</p>
                 <br>
                 <p><i>₡2.000</i></p>
                 <br>
-                <a class="btn btn-warning" th:href="@{/spaghetti}" role="button">Ordenar</a>
+                <a class="btn btn-warning" th:href="@{/spaghetti}" role="button" th:text="#{menu.titulo}">Ordenar</a>
             </div>
             <div id="imag_platillo2">
                 <img src="/images/spaghetti.jpg" width="235" height="175"/>
             </div>
             <div id="platillo3" style="padding-left: 1%;">
-                <p style="font-size: 20px"><strong>Pescado</strong></p>
-                <p style="font-size: 20px"><strong>Entero</strong></p>
+                <p style="font-size: 20px"><strong th:text="#{menu.titulo}">Pescado</strong></p>
+                <p style="font-size: 20px"><strong th:text="#{menu.titulo}">Entero</strong></p>
                 <br>
-                <p>Pargo Rojo Frito...</p>
+                <p th:text="#{menu.titulo}">Pargo Rojo Frito...</p>
                 <br>
                 <p><i>₡3.000</i></p>
                 <br>
-                <a class="btn btn-warning" th:href="@{/pescado}" role="button">Ordenar</a>
+                <a class="btn btn-warning" th:href="@{/pescado}" role="button" th:text="#{menu.titulo}">Ordenar</a>
             </div>
             <div id="imag_platillo3">
                 <img src="/images/pescado.jpg" width="235" height="175"/>
             </div>
         </div>
-        <p class="acompañamientos">Acompañamientos</p>
+        <p class="acompañamientos" th:text="#{menu.titulo}">Acompañamientos</p>
         <div id="producto2">
             <div id="acompañamiento1" style="padding-left: 1%; padding-top: 1%">
-                <p style="font-size: 24px"><strong>Chicharrones</strong></p>
+                <p style="font-size: 24px"><strong th:text="#{menu.titulo}">Chicharrones</strong></p>
                 <br>
-                <p>Costilla de Cerdo...</p>
+                <p th:text="#{menu.titulo}">Costilla de Cerdo...</p>
                 <br>
                 <p><i>₡1.500</i></p>
                 <br>
                 <br>
-                <a class="btn btn-warning" th:href="@{/chicharrones}" role="button">Ordenar</a>
+                <a class="btn btn-warning" th:href="@{/chicharrones}" role="button" th:text="#{menu.titulo}">Ordenar</a>
             </div>
             <div id="imag_acompañamiento1">
                 <img src="/images/chicharrones.jpg" width="235" height="175"/>
             </div>
             <div id="acompañamiento2" style="padding-left: 1%;">
-                <p style="font-size: 20px"><strong>Frijoles</strong></p>
-                <p style="font-size: 20px"><strong>Molidos</strong></p>
+                <p style="font-size: 20px"><strong th:text="#{menu.titulo}">Frijoles</strong></p>
+                <p style="font-size: 20px"><strong th:text="#{menu.titulo}">Molidos</strong></p>
                 <br>
-                <p>Frijoles Molidos con...</p>
+                <p th:text="#{menu.titulo}">Frijoles Molidos con...</p>
                 <br>
                 <p><i>₡1.300</i></p>
                 <br>
-                <a class="btn btn-warning" th:href="@{/frijoles}" role="button">Ordenar</a>
+                <a class="btn btn-warning" th:href="@{/frijoles}" role="button" th:text="#{menu.titulo}">Ordenar</a>
             </div>
             <div id="imag_acompañamiento2">
                 <img src="/images/frijoles.png" width="235" height="175"/>
             </div>
             <div id="acompañamiento3" style="padding-left: 1%; padding-top: 1%">
-                <p style="font-size: 24px"><strong>Nachos</strong></p>
+                <p style="font-size: 24px"><strong th:text="#{menu.titulo}">Nachos</strong></p>
                 <br>
-                <p>Tortillas Fritas en...</p>
+                <p th:text="#{menu.titulo}">Tortillas Fritas en...</p>
                 <br>
                 <p><i>₡1.300</i></p>
                 <br>
                 <br>
-                <a class="btn btn-warning" th:href="@{/nachos}" role="button">Ordenar</a>
+                <a class="btn btn-warning" th:href="@{/nachos}" role="button" th:text="#{menu.titulo}">Ordenar</a>
             </div>
             <div id="imag_acompañamiento3">
                 <img src="/images/nachos.jpg" width="235" height="175"/>
             </div>
         </div>
-        <p class="postres">Postres</p>
+        <p class="postres" th:text="#{menu.titulo}">Postres</p>
         <div id="producto3">
             <div id="postre1" style="padding-left: 1%; padding-top: 1%">
-                <p style="font-size: 24px"><strong>Tres Leches</strong></p>
+                <p style="font-size: 24px"><strong th:text="#{menu.titulo}">Tres Leches</strong></p>
                 <br>
-                <p>Pastel bañado con...</p>
+                <p th:text="#{menu.titulo}">Pastel bañado con...</p>
                 <br>
                 <p><i>₡1.500</i></p>
                 <br>
                 <br>
-                <a class="btn btn-warning" th:href="@{/tres_leches}" role="button">Ordenar</a>
+                <a class="btn btn-warning" th:href="@{/tres_leches}" role="button" th:text="#{menu.titulo}">Ordenar</a>
             </div>
             <div id="imag_acompañamiento1">
                 <img src="/images/tres leches.jpg" width="235" height="175"/>
             </div>
             <div id="postre2" style="padding-left: 1%;">
-                <p style="font-size: 20px"><strong>Cono de</strong></p>
-                <p style="font-size: 20px"><strong>Helado</strong></p>
+                <p style="font-size: 20px"><strong th:text="#{menu.titulo}">Cono de</strong></p>
+                <p style="font-size: 20px"><strong th:text="#{menu.titulo}">Helado</strong></p>
                 <br>
-                <p>Sabores a elegir:...</p>
+                <p th:text="#{menu.titulo}">Sabores a elegir:...</p>
                 <br>
                 <p><i>₡1.000</i></p>
                 <br>
-                <a class="btn btn-warning" th:href="@{/cono}" role="button">Ordenar</a>
+                <a class="btn btn-warning" th:href="@{/cono}" role="button" th:text="#{menu.titulo}">Ordenar</a>
             </div>
             <div id="imag_postre2">
                 <img src="/images/helado.jpg" width="235" height="175"/>
             </div>
             <div id="postre3" style="padding-left: 1%; padding-top: 1%">
-                <p style="font-size: 24px"><strong>Gelatina</strong></p>
+                <p style="font-size: 24px"><strong th:text="#{menu.titulo}">Gelatina</strong></p>
                 <br>
-                <p>Sabores a elegir:...</p>
+                <p th:text="#{menu.titulo}">Sabores a elegir:...</p>
                 <br>
                 <p><i>₡1.000</i></p>
                 <br>
                 <br>
-                <a class="btn btn-warning" th:href="@{/gelatina}" role="button">Ordenar</a>
+                <a class="btn btn-warning" th:href="@{/gelatina}" role="button" th:text="#{menu.titulo}">Ordenar</a>
             </div>
             <div id="imag_postre3">
                 <img src="/images/gelatina.jpg" width="235" height="175"/>

@@ -22,14 +22,6 @@ public class ReservacionesController {
         return "/reservaciones/reservaciones";
     }
 
-    @GetMapping("/pruebita")
-    public String pruebita(Reserva reserva, Model model) {
-        var reservas = reservaService.getReservas();
-        model.addAttribute("reservas", reservas);
-        List<Reserva> listaReservas = reservaService.getReservas();
-        return "/reservaciones/pruebita";
-    }
-
     @PostMapping("/confirmacion")
     public String confirmacion(Reserva reserva, Model model) {
         reservaService.save(reserva);
