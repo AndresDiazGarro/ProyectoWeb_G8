@@ -22,12 +22,6 @@ public class ReservacionesController {
         return "/reservaciones/reservaciones";
     }
 
-    @PostMapping("/confirmacion")
-    public String confirmacion(Reserva reserva, Model model) {
-        reservaService.save(reserva);
-        return "/reservaciones/confirmacion";
-    }
-
     @PostMapping("/mesaRomantica")
     public String reserva_mesaRomantica(Reserva reserva, Model model) {
         reservaService.save(reserva);
