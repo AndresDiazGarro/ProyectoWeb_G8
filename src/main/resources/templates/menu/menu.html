@@ -1,7 +1,7 @@
 <html>
     <head th:replace="layout/plantilla :: head">
     </head>
-    <body>
+    <body modelAttribute="menu">
         <header th:replace="layout/plantilla :: header"/>
         <section>
             <h2 class="titulo">Menú <a th:href="@{/(lang=es)}">ES</a> | 
@@ -15,33 +15,33 @@
             <h2 id="entradas" th:text="#{menu.titulo_entradas}">Entradas</h2>
             <aside id="chifrijo">
                 <b style="font-size: 23px">
-                    <p th:text="#{menu.titulo}">Chifrijo</p>
+                    <p th:text="#{producto.chifrijo}">Chifrijo</p>
                     <br>
                 </b>
-                <p th:text="#{menu.titulo}">Frijoles con su caldo, Chicharrón en trocitos, Arroz, Chimichurri/pico de gallo y Doraditas</p>
-                <i th:text="#{menu.titulo}">Precio: 1500 colones</i>
+                <p th:text="#{producto.chifrijo_descripcion}">Frijoles con su caldo, Chicharrón en trocitos, Arroz, Chimichurri/pico de gallo y Doraditas</p>
+                <i th:text="#{producto.chifrijo_precio}">Precio: 1500 colones</i>
             </aside>
             <aside id="imag_chifrijo">
                 <img src="/images/Chifrijo.jpg" width="280" height="150"/>
             </aside>
             <aside id="patacones">
                 <b style="font-size: 23px">
-                    <p th:text="#{menu.titulo}">Patacones</p>
+                    <p th:text="#{producto.patacones}">Patacones</p>
                     <br>
                 </b>
-                <p th:text="#{menu.titulo}">Plátanos verdes fritos en aceite</p>
-                <i th:text="#{menu.titulo}">Precio: 2000 colones</i>
+                <p th:text="#{producto.patacones_descripcion}">Plátanos verdes fritos en aceite</p>
+                <i th:text="#{producto.patacones_precio}">Precio: 2000 colones</i>
             </aside>
             <aside id="imag_patacones">
                 <img src="/images/patacones.jpg" width="280" height="150"/>
             </aside>
             <aside id="papas_fritas">
                 <b style="font-size: 23px">
-                    <p th:text="#{menu.titulo}">Papas Fritas</p>
+                    <p th:text="#{producto.papas_fritas}">Papas Fritas</p>
                     <br>
                 </b>
-                <p th:text="#{menu.titulo}">Papas cortadas en tiras fritas en aceite</p>
-                <i th:text="#{menu.titulo}">Precio: 2000 colones</i>
+                <p th:text="#{producto.papas_fritas_descripcion}">Papas cortadas en tiras fritas en aceite</p>
+                <i th:text="#{producto.papas_fritas_precio}">Precio: 2000 colones</i>
             </aside>
             <aside id="imag_papas_fritas">
                 <img src="/images/papas.jpg" width="280" height="150"/>
@@ -52,36 +52,36 @@
             <!--                              PLATILLOS PRINCIPALES                   -->
             <!--                              PLATILLOS PRINCIPALES                   -->
 
-            <h2 id="platillos_principales" th:text="#{menu.titulo}">Platillos Principales</h2>
+            <h2 id="platillos_principales">Platillos Principales</h2>
             <aside id="casado">
                 <b style="font-size: 23px">
-                    <p th:text="#{menu.titulo}">Casado</p>
+                    <p th:text="#{producto.casado}">Casado</p>
                     <br>
                 </b>
-                <p th:text="#{menu.titulo}">Arroz, Frijoles y un Plátano Dulce Frito, Acompañado de Carne de Vacuno, Cerdo, Pescado o Pollo.</p>
-                <i th:text="#{menu.titulo}">Precio: 3500 colones</i>
+                <p th:text="#{producto.casado_descripcion}">Arroz, Frijoles y un Plátano Dulce Frito, Acompañado de Carne de Vacuno, Cerdo, Pescado o Pollo.</p>
+                <i th:text="#{producto.casado_precio}">Precio: 3500 colones</i>
             </aside>
             <aside id="imag_casado">
                 <img src="/images/casado.jpg" width="280" height="150"/>
             </aside>
             <aside id="spaghetti">
                 <b style="font-size: 23px">
-                    <p th:text="#{menu.titulo}">Spaghetti con Albóndigas</p>
+                    <p th:text="#{producto.spaghetti}">Spaghetti con Albóndigas</p>
                     <br>
                 </b>
-                <p th:text="#{menu.titulo}">Fideos con Salsa de Tomate y Albóndigas de Carne</p>
-                <i th:text="#{menu.titulo}">Precio: 2000 colones</i>
+                <p th:text="#{producto.spaghetti_descripcion}">Fideos con Salsa de Tomate y Albóndigas de Carne</p>
+                <i th:text="#{producto.spaghetti_precio}">Precio: 2000 colones</i>
             </aside>
             <aside id="imag_spaghetti">
                 <img src="/images/spaghetti.jpg" width="280" height="150"/>
             </aside>
             <aside id="pescado">
                 <b style="font-size: 23px">
-                    <p th:text="#{menu.titulo}">Pescado Entero</p>
+                    <p th:text="#{producto.pescado}">Pescado Entero</p>
                     <br>
                 </b>
-                <p th:text="#{menu.titulo}">Pargo Rojo Frito en Aceite con Patacones</p>
-                <i th:text="#{menu.titulo}">Precio: 3000 colones</i>
+                <p th:text="#{producto.pescado_descripcion}">Pargo Rojo Frito en Aceite con Patacones</p>
+                <i th:text="#{producto.pescado_precio}">Precio: 3000 colones</i>
             </aside>
             <aside id="imag_pescado">
                 <img src="/images/pescado.jpg" width="280" height="150"/>
@@ -92,36 +92,36 @@
             <!--                              POSTRES                    -->
             <!--                              POSTRES                    -->
 
-            <h2 id="postres">Postres</h2>
+            <h2 id="postres" th:text="#{menu.titulo_postres}">Postres</h2>
             <aside id="tres_leches">
                 <b style="font-size: 23px">
-                    <p th:text="#{menu.titulo}">Tres Leches</p>
+                    <p th:text="#{producto.tres_leches}">Tres Leches</p>
                     <br>
                 </b>
-                <p th:text="#{menu.titulo}">Pastel bañado con tres tipos de leche: leche evaporada, crema de leche y leche condensada.</p>
-                <i th:text="#{menu.titulo}">Precio: 1500 colones</i>
+                <p th:text="#{producto.tres_leches_descripcion}">Pastel bañado con tres tipos de leche: leche evaporada, crema de leche y leche condensada.</p>
+                <i th:text="#{producto.tres_leches_precio}">Precio: 1500 colones</i>
             </aside>
             <aside id="imag_tres_leches">
                 <img src="/images/tres leches.jpg" width="280" height="150"/>
             </aside>
             <aside id="helado">
                 <b style="font-size: 23px">
-                    <p th:text="#{menu.titulo}">Cono de Helado</p>
+                    <p th:text="#{producto.cono}">Cono de Helado</p>
                     <br>
                 </b>
-                <p th:text="#{menu.titulo}">Sabores a elegir: Chocolate, Fresa, Vainilla, Chicle, Coco, Limón, Naranja, Caramelo</p>
-                <i th:text="#{menu.titulo}">Precio: 1000 colones</i>
+                <p th:text="#{producto.cono_descripcion}">Sabores a elegir: Chocolate, Fresa, Vainilla, Chicle, Coco, Limón, Naranja, Caramelo</p>
+                <i th:text="#{producto.cono_precio}">Precio: 1000 colones</i>
             </aside>
             <aside id="imag_helado">
                 <img src="/images/helado.jpg" width="280" height="150"/>
             </aside>
             <aside id="gelatina">
                 <b style="font-size: 23px">
-                    <p th:text="#{menu.titulo}">Gelatina</p>
+                    <p th:text="#{producto.gelatina}">Gelatina</p>
                     <br>
                 </b>
-                <p th:text="#{menu.titulo}">Sabores a elegir: Uva, Fresa, Tutifruti, Coco, Limón, Naranja</p>
-                <i th:text="#{menu.titulo}">Precio: 1000 colones</i>
+                <p th:text="#{producto.gelatina_descripcion}">Sabores a elegir: Uva, Fresa, Tutifruti, Coco, Limón, Naranja</p>
+                <i th:text="#{producto.gelatina_precio}">Precio: 1000 colones</i>
             </aside>
             <aside id="imag_gelatina">
                 <img src="/images/gelatina.jpg" width="280" height="150"/>
@@ -132,36 +132,36 @@
             <!--                              ACOMPAÑAMIENTOS                       -->
             <!--                              ACOMPAÑAMIENTOS                       -->
 
-            <h2 id="acompañamientos" th:text="#{menu.titulo}">Acompañamientos</h2>
+            <h2 id="acompañamientos" th:text="#{menu.titulo_acompanamientos}">Acompañamientos</h2>
             <aside id="chicharrones">
                 <b style="font-size: 23px">
-                    <p th:text="#{menu.titulo}">Chicharrones</p>
+                    <p th:text="#{producto.chicharrones}">Chicharrones</p>
                     <br>
                 </b>
-                <p th:text="#{menu.titulo}">Costilla de Cerdo Frita en Aceite</p>
-                <i th:text="#{menu.titulo}">Precio: 1500 colones</i>
+                <p th:text="#{producto.chicharrones_descripcion}">Costilla de Cerdo Frita en Aceite</p>
+                <i th:text="#{producto.chicharrones_precio}">Precio: 1500 colones</i>
             </aside>
             <aside id="imag_chicharrones">
                 <img src="/images/chicharrones.jpg" width="280" height="150"/>
             </aside>
             <aside id="frijoles">
                 <b style="font-size: 23px">
-                    <p th:text="#{menu.titulo}">Frijoles Molidos</p>
+                    <p th:text="#{producto.frijoles}">Frijoles Molidos</p>
                     <br>
                 </b>
-                <p th:text="#{menu.titulo}">Frijoles Molidos con Papas Tostadas</p>
-                <i th:text="#{menu.titulo}"> Precio: 1300 colones</i>
+                <p th:text="#{producto.frijoles_descripcion}">Frijoles Molidos con Papas Tostadas</p>
+                <i th:text="#{producto.frijoles_precio}"> Precio: 1300 colones</i>
             </aside>
             <aside id="imag_frijoles">
                 <img src="/images/frijoles.png" width="280" height="150"/>
             </aside>
             <aside id="nachos">
                 <b style="font-size: 23px">
-                    <p th:text="#{menu.titulo}">Nachos</p>
+                    <p th:text="#{producto.nachos}">Nachos</p>
                     <br>
                 </b>
-                <p th:text="#{menu.titulo}">Tortillas Fritas en Triángulos con Queso</p>
-                <i th:text="#{menu.titulo}">Precio:1300 colones</i></i>
+                <p th:text="#{producto.nachos_descripcion}">Tortillas Fritas en Triángulos con Queso</p>
+                <i th:text="#{producto.nachos_precio}">Precio:1300 colones</i></i>
             </aside>
             <aside id="imag_nachos">
                 <img src="/images/nachos.jpg" width="280" height="150"/>
@@ -172,36 +172,36 @@
             <!--                              ARROCES                     -->
             <!--                              ARROCES                     -->
             
-            <h2 id="arroces" th:text="#{menu.titulo}">Arroces</h2>
+            <h2 id="arroces" th:text="#{menu.titulo_arroces}">Arroces</h2>
             <aside id="camarones">
                 <b style="font-size: 23px">
-                        <p th:text="#{menu.titulo}">Arroz con Camarones</p>
+                        <p th:text="#{producto.camarones}">Arroz con Camarones</p>
                     <br>
                 </b>
-                <p th:text="#{menu.titulo}">Arroz, Camarones, Papas Fritas, Ensalada.</p>
-                <i th:text="#{menu.titulo}">Precio: 3500 colones</i>
+                <p th:text="#{producto.camarones_descripcion}">Arroz, Camarones, Papas Fritas, Ensalada.</p>
+                <i th:text="#{producto.camarones_precio}">Precio: 3500 colones</i>
             </aside>
             <aside id="imag_camarones">
                 <img src="/images/arroz_camarones.jpg" width="280" height="150"/>
             </aside>
             <aside id="pollo">
                 <b style="font-size: 23px">
-                    <p th:text="#{menu.titulo}">Arroz con Pollo</p>
+                    <p th:text="#{producto.pollo}">Arroz con Pollo</p>
                     <br>
                 </b>
-                <p th:text="#{menu.titulo}">Arroz, Pollo, Frijoles Molidos, Papas Tostadas</p>
-                <i th:text="#{menu.titulo}">Precio: 2500 colones</i>
+                <p th:text="#{producto.pollo_descripcion}">Arroz, Pollo, Frijoles Molidos, Papas Tostadas</p>
+                <i th:text="#{producto.pollo_precio}">Precio: 2500 colones</i>
             </aside>
             <aside id="imag_pollo">
                 <img src="/images/arroz_pollo.jpg" width="280" height="150"/>
             </aside>
             <aside id="jardinero">
                 <b style="font-size: 23px">
-                    <p th:text="#{menu.titulo}">Arroz Jardinero</p>
+                    <p th:text="#{producto.jardinero}">Arroz Jardinero</p>
                     <br>
                 </b>
-                <p th:text="#{menu.titulo}">Arroz, Cebollino, Culantro, Cebolla</p>
-                <i th:text="#{menu.titulo}">Precio: 3000 colones</i>
+                <p th:text="#{producto.jardinero_descrpcion}">Arroz, Cebollino, Culantro, Cebolla</p>
+                <i th:text="#{producto.jardinero_precio}">Precio: 3000 colones</i>
             </aside>
             <aside id="imag_jardinero">
                 <img src="/images/arroz_jardinero.jpg" width="280" height="150"/>
@@ -212,36 +212,36 @@
             <!--                              BEBIDAS                    -->
             <!--                              BEBIDAS                    -->
             
-            <h2 id="bebidas" th:text="#{menu.titulo}">Bebidas</h2>
+            <h2 id="bebidas" th:text="#{menu.titulo_bebidas}">Bebidas</h2>
             <aside id="limonada">
                 <b style="font-size: 23px">
-                    <p th:text="#{menu.titulo}">Limonada con Hierba Buena</p>
+                    <p th:text="#{producto.limonada}">Limonada con Hierba Buena</p>
                     <br>
                 </b>
-                <p th:text="#{menu.titulo}">Limón Mencino con Hierba Buena Fresca.</p>
-                <i th:text="#{menu.titulo}">Precio: 1200 colones</i>
+                <p th:text="#{producto.limonada_descripcion}">Limón Mencino con Hierba Buena Fresca.</p>
+                <i th:text="#{producto.limonada_precio}">Precio: 1200 colones</i>
             </aside>
             <aside id="imag_limonada">
                 <img src="/images/limonb.jpg" width="280" height="150"/>
             </aside>
             <aside id="te">
                 <b style="font-size: 23px">
-                    <p th:text="#{menu.titulo}">Té Frío Melocotón</p>
+                    <p th:text="#{producto.te_frio}">Té Frío Melocotón</p>
                     <br>
                 </b>
-                <p th:text="#{menu.titulo}">Té de Melocotón Fuze Tea</p>
-                <i th:text="#{menu.titulo}">Precio: 1100 colones</i>
+                <p th:text="#{producto.te_frio_descripcion}">Té de Melocotón Fuze Tea</p>
+                <i th:text="#{producto.te_frio_precio}">Precio: 1100 colones</i>
             </aside>
             <aside id="imag_te">
                 <img src="/images/fuzz.jpg" width="280" height="150"/>
             </aside>
             <aside id="chocolate">
                 <b style="font-size: 23px">
-                    <p th:text="#{menu.titulo}">Chocolate</p>
+                    <p th:text="#{producto.chocolate}">Chocolate</p>
                     <br>
                 </b>
-                <p th:text="#{menu.titulo}">Puede ser Frío o Caliente</p>
-                <i th:text="#{menu.titulo}">Precio: 1000 colones</i>
+                <p th:text="#{producto.chocolate_descripcion}">Puede ser Frío o Caliente</p>
+                <i th:text="#{producto.chocolate_precio}">Precio: 1000 colones</i>
             </aside>
             <aside id="imag_chocolate">
                 <img src="/images/chocolate.jpeg" width="280" height="150"/>
