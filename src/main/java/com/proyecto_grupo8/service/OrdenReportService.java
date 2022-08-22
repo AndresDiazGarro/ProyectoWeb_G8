@@ -14,13 +14,13 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.ResourceUtils;
 
 @Service
-public class ReservaReportService {
+public class OrdenReportService {
 
     private String reportPath;
 
     public String generateReport() {
         try {
-            File file = ResourceUtils.getFile("classpath:ReporteReserva.jasper");
+            File file = ResourceUtils.getFile("classpath:ReporteOrden.jasper");
             reportPath = file.getParent();
 
             JasperReport jasperReport = (JasperReport) JRLoader.loadObject(file);
@@ -33,8 +33,8 @@ public class ReservaReportService {
 
             JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, con);
 
-            JasperExportManager.exportReportToPdfFile(jasperPrint, reportPath + "\\ReporteReservas.pdf");
-            return reportPath + "\\ReporteReservas.pdf";
+            JasperExportManager.exportReportToPdfFile(jasperPrint, reportPath + "\\ReporteOrdenes.pdf");
+            return reportPath + "\\ReporteOrdenes.pdf";
         } catch (Exception e) {
             return e.getMessage();
         }

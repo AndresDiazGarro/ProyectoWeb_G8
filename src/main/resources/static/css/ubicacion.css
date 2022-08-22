@@ -25,6 +25,17 @@
     overflow: visible;
 }
 
+.cccontenido{
+    position: absolute;
+    top: 24%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #403001;
+    padding-left: 2%;
+    overflow: visible;
+}
+
 
 .cuad_horarios{
     height: 100px;
