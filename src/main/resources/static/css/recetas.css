@@ -11,31 +11,98 @@
     padding-left: 2%;
 }
 
-#barraLateral {
+#barraLateralRecetas {
     position: absolute;
     top: 12%;
     right: 0;
-    height: auto;
+    height: 140%;
     width: 15%;
     background-color: #A68B03;
     color: whitesmoke;
 }
 
-#contenido {
+#contenidoRecetas {
     position: absolute;
-    top: 12%;
+    font-size: 18px;
+    top: 23%;
     left: 0;
-    height: auto;
+    height: 130%;
     width: 85%;
     background-color: #403001;
     color: whitesmoke;
-    overflow: visible;
+    padding-left: 4%;
+
 }
 
-#inicio{
+#receta1{
     position: absolute;
-    top: 30%;
-    padding-right: 2%;
-    background-color: #403001;
+    top: 22%;
+    left: 4%;
+    text-align: center
+    
 }
 
+#receta2{
+    position: absolute;
+    top: 22%;
+    left: 35%;
+    text-align: center
+    
+}
+
+#receta3{
+    position: absolute;
+    top: 22%;
+    left: 66%;
+    text-align: center
+    
+}
+
+#receta4{
+    position: absolute;
+    top: 60%;
+    left: 4%;
+    text-align: center
+    
+}
+
+#receta5{
+    position: absolute;
+    top: 60%;
+    left: 35%;
+    text-align: center
+    
+}
+
+#receta6{
+    position: absolute;
+    top: 60%;
+    left: 66%;
+    text-align: center;
+        
+    background-color: #403001;
+    
+}
+
+#barraIngredientes {
+    position: absolute;
+    font-size: 20px;
+    top: 12%;
+    right: 0;
+    height: 108%;
+    width: 15%;
+    background-color: #A68B03;
+    color: whitesmoke;
+}
+
+#contenidoReceta {
+    position: absolute;
+    font-size: 18px;
+    top: 23%;
+    left: 0;
+    height: 100%;
+    width: 85%;
+    background-color: #403001;
+    color: whitesmoke;
+    padding-left: 4%;
+}

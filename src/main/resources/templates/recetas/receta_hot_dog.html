@@ -1,0 +1,45 @@
+<html>
+    <head th:replace="layout/plantilla :: head">
+        <title>Restaurante La Hoja de Palma</title>
+    </head>
+    <body>
+        <header th:replace="layout/plantilla :: header"/>
+        <br>
+        <br>
+        <h2 class="titulo">Receta Hot Dog casero</h2>
+
+        <aside id="barraIngredientes" style="text-align: center">
+            <br>
+            <h2 >Ingredientes</h2>
+            <br><br>
+
+            <p>- Salchicha de buen tamaño</p>
+            <p>- Pan para hot dog</p>
+            <p>- Salsa de queso</p>
+            <p>- Tocino</p>
+            <p>- Mostaza</p>
+            <p>- Chile con carne</p>
+            <p>- Tomate</p>
+            <p>- Cebolla</p>
+
+        </aside>
+
+
+        <section id="contenidoReceta" style="color: white" >
+            <br>
+            <p>Si bien el nombre puede resultar algo falso, no podrás resistirte
+                al sabor de este hot dog hecho en la comodidad de tu hogar</p>
+            <br>
+            <h2>Preparación:</h2>
+            <br>
+            <article>
+                <header><h4>Video explicación de como preparar el Hot Dog casero</h4></header>
+                <br>
+                <iframe width="902" height="507" src="https://www.youtube.com/embed/18sd1wEHdH0" title="Estos SI son Hot Dogs Caseros | La Capital" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </article>
+
+        </section>
+
+        <footer th:replace="layout/plantilla :: footer" />
+    </body>
+</html>

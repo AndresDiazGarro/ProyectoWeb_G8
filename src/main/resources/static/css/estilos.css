@@ -38,12 +38,13 @@
 #contenidoCompleto {
     position: absolute;
     top: 12%;
-    left: 0;
+    left: 0%;
     height: auto;
     width: 100%;
     background-color: #403001;
     color: whitesmoke;
     overflow: visible;
 }
+
 
 

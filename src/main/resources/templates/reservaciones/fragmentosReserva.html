@@ -1,0 +1,38 @@
+
+<html>
+    <head th:replace="layout/plantilla :: head">
+        <title>listado</title>
+    </head>
+    <body>
+        <section th:fragment="agregarCliente">
+            <div id="agregarCliente" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header bg-info text-white">
+                            <h3 style="text-align: center">¡Reserva confirmada exitosamente!</h3>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section th:fragment="botonesAgregar">
+            <div class="container">
+                <div class="row">
+                    <div style="background-color: #403001">
+                    <button 
+                        type="button" 
+                        class="btn btn-warning" 
+                        data-bs-toggle="modal" 
+                        data-bs-target="#agregarCliente">
+                        <i>Confirmar</i>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </body>
+</html>

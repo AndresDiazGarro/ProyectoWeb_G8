@@ -6,50 +6,109 @@
         <header th:replace="layout/plantilla :: header"/>
         <br>
         <br>
-        <h2 class="titulo">Recetas Disponibles</h2>
+        <h2 class="titulo">Recetas</h2>
 
-        <aside id="barraLateral" style="text-align: center">
+        <aside id="barraLateralRecetas" style="text-align: center">
             <br>
             <h2 >Recetas Populares</h2>
-            <br>
+            <br><br>
             <h3> Pizza Suprema de la Palma</h3>
+            <p>Pizza de carne y vegetales horneada al punto perfecto</p>
             <p>
             <figure>
                 <img src="/images/pizza.jpg" width="230" height="150"/>
             </figure>
         </p>
-        <a  style="color: white; font-size: 20px" th:href="@{/orden/casado}">Ver Platillo</a>
+        <a class="btn btn-warning" style="color: white; font-size: 20px" th:href="@{/receta_pizza}">Ver Platillo</a>
 
         <br><br>
 
         <h3>Spaghetti con Albóndigas</h3>
+        <p>Fideos con Salsa de Tomate y Albóndigas de Carne</p>
         <p>
             <br>
             <img src="/images/spaghetti.jpg" width="230" height="150"/>
         </p>
-        <a  style="color: white; font-size: 20px" th:href="@{/orden/casado}">Ver Platillo</a>
+        <a class="btn btn-warning" style="color: white; font-size: 20px" th:href="@{/receta_spaghetti}">Ver Platillo</a>
         <br><br>
         <h3>Pescado Entero</h3>
+        <p>Pargo Rojo Frito en Aceite con Patacones</p>
         <p>
             <br>
             <img src="/images/pescado.jpg" width="230" height="150"/>
         </p>
-        <a  style="color: white; font-size: 20px" th:href="@{/orden/casado}">Ver Platillo</a>
+        <a class="btn btn-warning" style="color: white; font-size: 20px" th:href="@{/receta_pescado}">Ver Platillo</a>
         <br><br><br>
     </aside>
 
-   
-        <section id="inicio" style="color: white" >
-         <div class="container">
-                <div class="row">
-                    <div class="col-md-30 mx-12">
-                        
-                        <div class="col-md-30 mx-12">
-                                <h3>Patacones</h3>
-                                
-                    </div>
-               </div>
-         </div>
+
+    <section id="contenidoRecetas" style="color: white" >
+        <br>
+        <p style="font-size: 20px">¡Bienvenido al apartado de recetas!</p>
+        <p>Aquí se muestran varias de las recetas que utilizamos en nuestro restaurante para que el sazón de nuestro restaurante
+            llegue a la comodidad de tu hogar</p>
+        <p>Además de quedar antojado por venir a nuestro local a degustar muchos más platillos</p>
+        <br>
+        <p>Estas son las recetas que tenemos disponibles:</p>
+
+
+        <aside id="receta1">
+            <h3>Patacones</h3>
+            <br>
+            <p>Plátanos verdes fritos en aceite</p>
+            <img src="/images/patacones.jpg" width="330" height="220"/>
+            <br><br>
+            <a class="btn btn-warning" style="color: white; font-size: 20px" th:href="@{/receta_patacones}">Ver Platillo</a>
+        </aside>
+
+        <aside id="receta2">
+            <h3>Hamburguesa Clásica</h3>
+            <br>
+            <p>Excelente para disfrutar solo o en compañia</p>
+            <img src="/images/hamburguesa.jpg" width="330" height="220"/>
+            <br><br>
+            <a class="btn btn-warning" style="color: white; font-size: 20px" th:href="@{/receta_hamburguesa}">Ver Platillo</a>
+        </aside>
+
+        <aside id="receta3">
+            <h3>Hot Dog</h3>
+            <br>
+            <p>Un hot dog casero pero a la vez muy elegante</p>
+            <img src="/images/hot dog.jpg" width="330" height="220"/>
+            <br><br>
+            <a class="btn btn-warning" style="color: white; font-size: 20px" th:href="@{/receta_hot_dog}">Ver Platillo</a>
+        </aside>
+
+        <aside id="receta4">
+            <h3>Pizza Suprema de la Palma</h3>
+            <br>
+            <p>Pizza de carne y vegetales horneada al punto perfecto</p>
+            <img src="/images/pizza.jpg" width="330" height="220"/>
+            <br><br>
+            <a class="btn btn-warning" style="color: white; font-size: 20px" th:href="@{/receta_pizza}">Ver Platillo</a>
+        </aside>
+
+
+        <aside id="receta5">
+            <h3>Spaghetti con Albóndigas</h3>
+            <br>
+            <p>Fideos con Salsa de Tomate y Albóndigas de Carne</p>
+            <img src="/images/spaghetti.jpg" width="330" height="220"/>
+            <br><br>
+            <a class="btn btn-warning" style="color: white; font-size: 20px" th:href="@{/receta_spaghetti}">Ver Platillo</a>
+        </aside>
+
+
+        <aside id="receta6">
+            <h3>Pescado Entero</h3>
+            <br>
+            <p>Pargo Rojo Frito en Aceite con Patacones</p>
+            <img src="/images/pescado.jpg" width="330" height="220"/>
+            <br><br>
+            <a class="btn btn-warning" style="color: white; font-size: 20px" th:href="@{/receta_pescado}">Ver Platillo</a>
+        </aside>
+
+
     </section>
 
     <footer th:replace="layout/plantilla :: footer" />

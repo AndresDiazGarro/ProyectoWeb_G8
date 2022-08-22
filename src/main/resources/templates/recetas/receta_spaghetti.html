@@ -1,0 +1,47 @@
+<html>
+    <head th:replace="layout/plantilla :: head">
+        <title>Restaurante La Hoja de Palma</title>
+    </head>
+    <body>
+        <header th:replace="layout/plantilla :: header"/>
+        <br>
+        <br>
+        <h2 class="titulo">Receta Spaghetti con Albóndigas</h2>
+
+        <aside id="barraIngredientes" style="text-align: center">
+            <br>
+            <h2 >Ingredientes</h2>
+            <br><br>
+
+            <p>- Fideos</p>
+            <p>- Sal</p>
+            <p>- Tomate</p>
+            <p>- Culantro</p>
+            <p>- Cebolla</p>
+            <p>- Carne molida</p>
+            <p>- Harina</p>
+            <p>- Pimienta</p>
+            <p>- Salsa Lizano</p>
+            <p>- Ajo</p>
+
+        </aside>
+
+
+        <section id="contenidoReceta" style="color: white" >
+            <br>
+            <p>Este spaghetti es un verdadero manjar, hace recordar nuestra infancia con 
+                ese exquisito sabor, tanto de sus fideos y salsa, como de las albóndigas</p>
+            <br>
+            <h2>Preparación:</h2>
+            <br>
+            <article>
+                <header><h4>Video explicación de como preparar el Spaghetti con Albóndigas</h4></header>
+                <br>
+                <iframe width="902" height="507" src="https://www.youtube.com/embed/3kLW3uL-4vk" title="Cómo Hacer un Buen Espagueti con Albóndigas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </article>
+
+        </section>
+
+        <footer th:replace="layout/plantilla :: footer" />
+    </body>
+</html>

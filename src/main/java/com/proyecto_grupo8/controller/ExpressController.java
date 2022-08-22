@@ -74,7 +74,7 @@ public class ExpressController {
         return "/express/factura";
     }
 
-    @PostMapping("orden/guardar_orden_casado")
+    @PostMapping("/guardar_orden_casado")
     public String guardarOrden_Casado(Orden orden, Model model) {
         ordenService.save(orden);
         var ordenes = ordenService.getOrdenes();
@@ -107,7 +107,7 @@ public class ExpressController {
         return "/express/factura_casado";
     }
 
-    @PostMapping("orden/guardar_orden_spaghetti")
+    @PostMapping("/guardar_orden_spaghetti")
     public String guardarOrden_Spaghetti(Orden orden, Model model) {
         ordenService.save(orden);
         var ordenes = ordenService.getOrdenes();
@@ -140,7 +140,7 @@ public class ExpressController {
         return "/express/factura_spaghetti";
     }
 
-    @PostMapping("orden/guardar_orden_pescado")
+    @PostMapping("/guardar_orden_pescado")
     public String guardarOrden_Pescado(Orden orden, Model model) {
         ordenService.save(orden);
         var ordenes = ordenService.getOrdenes();
@@ -173,7 +173,7 @@ public class ExpressController {
         return "/express/factura_pescado";
     }
 
-    @PostMapping("orden/guardar_orden_chicharrones")
+    @PostMapping("/guardar_orden_chicharrones")
     public String guardarOrden_Chicharrones(Orden orden, Model model) {
         ordenService.save(orden);
         var ordenes = ordenService.getOrdenes();
@@ -206,7 +206,7 @@ public class ExpressController {
         return "/express/factura_chicharrones";
     }
 
-    @PostMapping("orden/guardar_orden_frijoles")
+    @PostMapping("/guardar_orden_frijoles")
     public String guardarOrden_Frijoles(Orden orden, Model model) {
         ordenService.save(orden);
         var ordenes = ordenService.getOrdenes();
@@ -239,7 +239,7 @@ public class ExpressController {
         return "/express/factura_frijoles";
     }
 
-    @PostMapping("orden/guardar_orden_nachos")
+    @PostMapping("/guardar_orden_nachos")
     public String guardarOrden_Orden(Orden orden, Model model) {
         ordenService.save(orden);
         var ordenes = ordenService.getOrdenes();
@@ -272,7 +272,7 @@ public class ExpressController {
         return "/express/factura_nachos";
     }
 
-    @PostMapping("orden/guardar_orden_tres_leches")
+    @PostMapping("/guardar_orden_tres_leches")
     public String guardarOrden_Tres_Leches(Orden orden, Model model) {
         ordenService.save(orden);
         var ordenes = ordenService.getOrdenes();
@@ -305,7 +305,7 @@ public class ExpressController {
         return "/express/factura_tres_leches";
     }
 
-    @PostMapping("orden/guardar_orden_cono")
+    @PostMapping("/guardar_orden_cono")
     public String guardarOrden_Cono(Orden orden, Model model) {
         ordenService.save(orden);
         var ordenes = ordenService.getOrdenes();
@@ -338,7 +338,7 @@ public class ExpressController {
         return "/express/factura_cono";
     }
 
-    @PostMapping("orden/guardar_orden_gelatina")
+    @PostMapping("/guardar_orden_gelatina")
     public String guardarOrden_Gelatina(Orden orden, Model model) {
         ordenService.save(orden);
         var ordenes = ordenService.getOrdenes();
@@ -371,70 +371,70 @@ public class ExpressController {
         return "/express/factura_gelatina";
     }
 
-    @GetMapping("/express/modificar_orden_casado/{numOrden}")
+    @GetMapping("/modificar_orden_casado/{numOrden}")
     public String modificarOrden_Casado(Orden orden, Model model) {
         orden = ordenService.getOrden(orden);
         model.addAttribute("orden", orden);
         return "/express/orden_casado";
     }
     
-        @GetMapping("/express/modificar_orden_spaghetti/{numOrden}")
+        @GetMapping("/modificar_orden_spaghetti/{numOrden}")
     public String modificarOrden_Spaghetti(Orden orden, Model model) {
         orden = ordenService.getOrden(orden);
         model.addAttribute("orden", orden);
         return "/express/orden_spaghetti";
     }
     
-        @GetMapping("/express/modificar_orden_pescado/{numOrden}")
+        @GetMapping("/modificar_orden_pescado/{numOrden}")
     public String modificarOrden_Pescado(Orden orden, Model model) {
         orden = ordenService.getOrden(orden);
         model.addAttribute("orden", orden);
         return "/express/orden_pescado";
     }
     
-        @GetMapping("/express/modificar_orden_chicharrones/{numOrden}")
+        @GetMapping("/modificar_orden_chicharrones/{numOrden}")
     public String modificarOrden_Chicharrones(Orden orden, Model model) {
         orden = ordenService.getOrden(orden);
         model.addAttribute("orden", orden);
         return "/express/orden_chicharrones";
     }
     
-        @GetMapping("/express/modificar_orden_frijoles/{numOrden}")
+        @GetMapping("/modificar_orden_frijoles/{numOrden}")
     public String modificarOrden_Frijoles(Orden orden, Model model) {
         orden = ordenService.getOrden(orden);
         model.addAttribute("orden", orden);
         return "/express/orden_frijoles";
     }
     
-        @GetMapping("/express/modificar_orden_nachos/{numOrden}")
+        @GetMapping("/modificar_orden_nachos/{numOrden}")
     public String modificarOrden_Nachos(Orden orden, Model model) {
         orden = ordenService.getOrden(orden);
         model.addAttribute("orden", orden);
         return "/express/orden_nachos";
     }
     
-        @GetMapping("/express/modificar_orden_tres_leches/{numOrden}")
+        @GetMapping("/modificar_orden_tres_leches/{numOrden}")
     public String modificarOrden_Tres_Leches(Orden orden, Model model) {
         orden = ordenService.getOrden(orden);
         model.addAttribute("orden", orden);
         return "/express/orden_tres_leches";
     }
     
-        @GetMapping("/express/modificar_orden_cono/{numOrden}")
+        @GetMapping("/modificar_orden_cono/{numOrden}")
     public String modificarOrden_Cono(Orden orden, Model model) {
         orden = ordenService.getOrden(orden);
         model.addAttribute("orden", orden);
         return "/express/orden_cono";
     }
     
-        @GetMapping("/express/modificar_orden_gelatina/{numOrden}")
+        @GetMapping("/modificar_orden_gelatina/{numOrden}")
     public String modificarOrden_Gelatina(Orden orden, Model model) {
         orden = ordenService.getOrden(orden);
         model.addAttribute("orden", orden);
         return "/express/orden_gelatina";
     }
 
-    @GetMapping("/express/eliminar_orden/{numOrden}")
+    @GetMapping("/eliminar_orden/{numOrden}")
     public String eliminarOrden(Orden orden) {
         ordenService.delete(orden);
         return "redirect:/express";

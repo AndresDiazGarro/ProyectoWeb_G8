@@ -17,7 +17,7 @@
             <h3 style="font-size: 36px; color: whitesmoke">Datos para la orden</h3>
             <br>
             <br>
-            <form th:action="@{/orden/guardar_orden_chicharrones}" th:object="${orden}"
+            <form th:action="@{/guardar_orden_chicharrones}" th:object="${orden}"
                   method="POST" style="width: 25%" class="was-validated">
                 <div class="form-floating mb-3">
                     <input type="text" class="form-control" id="nombre" placeholder="Nombre" required="true" th:field="*{nombre}">

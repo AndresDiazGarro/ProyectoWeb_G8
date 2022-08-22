@@ -15,25 +15,26 @@
                 <br>
 
                 <div th:each="reserva, iterStat: ${reservas}" th:if="${iterStat.index >= iterStat.size-1}">
-                <p> Reserva a nombre de: [[${reserva.nombre} + ' ' + ${reserva.apellidos}]] </p>
-                <br>
-                <p> Teléfono: [[${reserva.telefono}]]</p>
-                <br>
-                <p> Cédula: [[${reserva.cedula}]] </p>
-                <br>
-                <p> Cantidad de personas: [[${reserva.cant_personas}]] </p>
-                <br>
-                <p> Para el día: [[${reserva.dia_reserva}]] </p>
-                <p>A la hora: [[${reserva.hora_reserva}]] </p>
-                <br>
-                <p><strong> Mesa reservada: </strong></p>
-                <p> Mesa Sencilla </p>
-                <br>
-                <img src="/images/mesa2.jpg" width="480" height="250"/>
-               <br><br>
-                <a class="btn btn-warning" role="button" th:href="@{/confirmacion}">Confirmar</a>
-                <br><br><br><br>
-            </div>
+                    <p> Reserva a nombre de: [[${reserva.nombre} + ' ' + ${reserva.apellidos}]] </p>
+                    <br>
+                    <p> Teléfono: [[${reserva.telefono}]]</p>
+                    <br>
+                    <p> Cédula: [[${reserva.cedula}]] </p>
+                    <br>
+                    <p> Cantidad de personas: [[${reserva.cant_personas}]] </p>
+                    <br>
+                    <p> Para el día: [[${reserva.dia_reserva}]] </p>
+                    <p>A la hora: [[${reserva.hora_reserva}]] </p>
+                    <br>
+                    <p><strong> Mesa reservada: </strong></p>
+                    <p> Mesa Sencilla </p>
+                    <br>
+                    <img src="/images/mesa2.jpg" width="480" height="250"/>
+                    <br><br>
+                    <section th:replace="reservaciones/fragmentosReserva :: botonesAgregar"/>
+                    <section th:replace="reservaciones/fragmentosReserva :: agregarCliente"/>
+                    <br><br><br><br>
+                </div>
 
             </div>
         </div> 
